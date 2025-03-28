@@ -1,5 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[a4paper, margin=1in]{geometry}
+\usepackage{pgfgantt}
+
 
 \title{CM50175 – Project Proposal}
 \author{Oscar Dos Santos Nunes \\ Student ID: JOFDSN20}
@@ -30,7 +32,7 @@ Some possible titles include:
     \item \textit{Evaluating Student Writing with Deep Learning: A Comparative Approach}
     \item \textit{Automated Essay Scoring with Explainable Deep Learning Architectures}
     \item \textit{Beyond Accuracy: Fair and Interpretable Deep Learning for Essay Scoring}
-    \item \textit{Multimodal Essay Assessment: Integrating Handwritten and Typed Text in Neural AES Systems}
+    \item \textit{Multi-modal Essay Assessment: Integrating Handwritten and Typed Text in Neural AES Systems}
     \item \textit{Benchmarking Traditional and Deep Learning Models for Essay Scoring}
 \end{itemize}
 
@@ -54,9 +56,9 @@ including text classification and sentiment analysis. For example, BERT achieved
 ability to to model contextual information and the relationships between words in a sentence. The models are well suited to AES tasks due to their ability to 
 contextualize meaning beyond the surface-level features.
 
-However, there are still several challenges to overcome. Deep networks often act as "black boxes", which offer very little intrepretability into how they arrive
+However, there are still several challenges to overcome. Deep networks often act as "black boxes", which offer very little interpretability into how they arrive
 at an output. This creases a concern for use in education where expandability/feedback and essential. Furthermore, these models require vast quantities of 
-labeled-data of which is not always available. Additionaly there are a number of documented risks regarding the algorithmic bias in AES particularly when
+labeled-data of which is not always available. Additionally there are a number of documented risks regarding the algorithmic bias in AES particularly when
 dealing with non-native speakers or student with a less represented background than in the training data.
 
 Moreover, much of the existing AES models focus solely on predicting a final holistic score, with less of a focus on providing additives that would be given by a human marker,
@@ -68,30 +70,191 @@ a deep learning model, the research aims to contribute to the development of a m
 
 
 \section*{Objectives and Research Questions}
-% List your main objectives (e.g., 3–5)
-% Then include any research questions you're investigating
+This project aims to investigate the use of deep learning for automated essay scoring, focusing on the development of a model that
+is accurate, fair and explainable. The ultimate goal is the develop a system that can generate consistent
+and reliable scoring for comparable to that of human marking, while also considering the systems interpretability and the 
+potential for future enhancements such as feedback generation or support for handwritten text
+
+\subsection{Objectives}
+\begin{enumerate}
+    \item \textbf{Review Existing AES Systems And literature:} \textit{Identify the strengths, limitations, and gaps in current approaches,
+    particularly in those using deep learning techniques.}
+    \item \textbf{Select And Prepare Datasets:} \textit{Selecting, preparing and pre-processing datasets for training and evaluation of the model.}
+    \item \textbf{Develop And Compare Model Performance:} \textit{Implementing and evaluating a deep learning model for AES,
+    comparing its performance to traditional machine learning approaches.}
+    \item \textbf{Evaluate The Performance, Fairness And Interpretability:} \textit{Investigate any issues with Biases, inconsistencies in the methods, as well as
+    the models transparency and "trustworthiness".}
+    \item \textbf{Explore Potential Enhancements:} \textit{Investigate the potential for future enhancements to the model, such as feedback generation, or multi-modal input.}
+
+\end{enumerate}
+
+\subsection{Research Questions}
+\begin{enumerate}
+    \item To what extent can transformer-based models outperform traditional machine learning approaches within the context of an automated essay scoring system?
+    \item What types of biases are present in AES systems, and how can deep learning models be adapted to mitigate these issues?
+    \item what are the potential trade offs between scoring accuracy, computational efficiency, and interpretability within the current AES techniques?
+    \item Can AES models by extended to provide meaningful and human-like feedback to support their usage within the educational setting?
+\end{enumerate}
 
 \section*{Background and Related Work}
-% Summarise relevant literature or previous work in the field
-% Mention how your project relates or builds upon it
+Automated Essay Scoring (AES) systems have been in development for over five decades, evolving from rule-based and statistical 
+approaches into increasingly complex machine learning and deep learning technologies. Early developments such as Project Essay 
+Grade (PEG) and e-rater relied on handcrafted features, including high-level syntactic and lexical characteristics. While these 
+methods demonstrated some success and saw real-world application they often struggled to capture the semantic and contextual 
+depth found in students work.
+
+With the growth of more data focused approaches in natural language processing (NLP), AES has increasingly adopted machine learning 
+techniques. Traditional models such as support vector machines (SVM), random forests, and ridge regression were trained on 
+handcrafted features to predict human-marked essay scores. However, these models were still limited by their reliance on manually 
+created inputs, which creates constraints with the scalability and generalization across writing prompts and student population 
+groups.
+
+The growth of deep learning, particularly with transformer-based models, has significantly advanced AES research. Pre-trained 
+language models such as \textbf{BERT} and \textbf{RoBERTa} have demonstrated strong performance across a wide range of NLP tasks, thanks to their 
+ability to model contextual dependencies within text. When compared to more typical machine learning techniques, studies using BERT 
+for AES have shown notable gains in predicting accuracy, especially when using benchmark datasets such as the \textbf{ASAP (Automated 
+Student Assessment Prize) corpus}.
+
+Despite these advancements, a number of obstacles still exists, deep learning models frequently operate as "black boxes", providing little room 
+for interpretation. This is a major drawback for AES, because user trust and educational integration rely on score reasoning and openness.
+Second, there are now worries about algorithmic bias, especially when it comes to under-represented student groups or non-native english speakers.
+These issues raise questions about fairness, generalisability, and the ethical use of AES in high-stakes contexts. These issues raise questions about 
+fairness, generalisability, and the ethical use of AES in high-stakes contexts.
+
+Furthermore, much of current AES work focuses on holistic scoring without exploring the formative aspects of feedback, rubric-based scoring, or the 
+integration of multi-modal inputs. Expandability methods such as SHAP or attention-based visualizations have had lots of research recently to focus
+on improving the models transparency, while hybrid systems that combine neural and symbolic components have showed promise in improving interpretability.
+and control.
+
+This project builds on these advancements by developing an AES model using deep learning, evaluating its performance and fairness, and exploring potential 
+avenues for expansion. By benchmarking against traditional baselines and considering explainability and ethical implications, this work aims to contribute  
+to the growing body of research seeking to make AES systems more robust, transparent, and educationally useful.
 
 \section*{Project Plan}
 \subsection*{Task Breakdown}
-% List the major tasks or phases of your project
+Bellow outlines the key tasks associated with the project, along with their expected duration for completion. Important to note that week 1 is considered 
+as the week commencing March 31\textsuperscript{st}.
+
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|c|p{5cm}|c|p{6cm}|} 
+        \hline
+        \textbf{Task ID} & \textbf{Task Description} & \textbf{Duration (Weeks)} & \textbf{Deliverables} \\ 
+        \hline
+        T1 & Literature review and intro sections & Weeks 1 - 4 & Report sections completed and ready for submission \\ 
+        \hline
+        T2 & Dataset pre-processing and model development plan & Weeks 3 - 6 & Detailed plan for model development and datasets ready for next steps \\ 
+        \hline
+        T3 & Baseline model performance evaluation & Weeks 6 - 9 & Use related models and classic ML techniques to establish a baseline for performance \\ 
+        \hline
+        T4 & Deep Learning model development & Weeks 8 - 14 & Using related work and other models, develop out own AES system \\ 
+        \hline
+        T5 & Evaluation; performance, fairness, and explainability & Weeks 14 - 17  & Document models performance against key metrics and other models \\ 
+        \hline
+        T6 & Reporting and documentation & Weeks 18 - 21 & Complete the report and discuss the optional extensions \\ 
+        \hline
+        T7 & System extension development & Weeks 20 - 22 & Develop additional systems and discuss changes to performance \\ 
+        \hline
+    \end{tabular}
+    \end{center}
 
 \subsection*{Timeline}
-% Include estimated start/end dates for each task
+
+\resizebox{\textwidth}{!}{
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    title/.style={draw=none, fill=none},
+    bar height=0.6,
+    bar label font=\small\bfseries
+    ]{1}{22}
+
+    \gantttitle{Project Timeline (Weeks 1–22)}{22} \\
+    \gantttitlelist{1,...,22}{1} \\
+
+    \ganttbar{T1: Literature Review}{1}{4} \\
+    \ganttbar{T2: Dataset + Plan}{3}{6} \\
+    \ganttbar{T3: Baseline Models}{6}{9} \\
+    \ganttbar{T4: DL Model Development}{8}{14} \\
+    \ganttbar{T5: Evaluation + Explainability}{14}{17} \\
+    \ganttbar{T6: Report + Docs}{18}{21} \\
+    \ganttbar{T7: Extension Work}{20}{22}
+\end{ganttchart}
+}
 
 \subsection*{Dependencies and Risks}
-% Note any task dependencies or risks that could delay progress
+
+This projects tasks are sequential in nature, with each task building upon the findings of the previous one. due to that I have decided to omit a discussion for the dependencies. However 
+below is an outline of the potential risks and the steps that will be taken to mitigate their effects.
+
+
+\begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|p{4.5cm}|p{6cm}|p{4.5cm}|}
+        \hline
+        \textbf{Risk} & \textbf{Impact} & \textbf{Mitigation Strategy} \\
+        \hline
+        Limited access to large, well-labelled datasets & May reduce model performance and generalisability & Use multiple publicly available datasets; explore data augmentation techniques; optionally 
+        explore synthetic data generation using GenAI \\
+        \hline
+        Inconsistent scoring methods and scales across datasets & May skew model results and reduce comparability across sources & Implement stratified sampling, resampling, or weighted loss functions 
+        to normalise scoring differences \\
+        \hline
+        Lack of experience with deep learning and transformer architectures & Poor model performance; longer development time & Allocate early project time to tutorials and documentation; replicate 
+        open-source AES models to build understanding \\
+        \hline
+        Deep learning model underperforms compared to baselines & Model may not surpass traditional ML methods & Clearly document findings and contribute insight; maximise use of university resources 
+        to improve model tuning and evaluation \\
+        \hline
+        Computational constraints & Prolonged training times or restricted model size & Leverage University GPU clusters and free-tier HPC resources such as Google Colab Pro or Kaggle Kernels \\
+        \hline
+        Ethical concerns related to student data & Potential breaches of data usage policy or ethical standards & Confirm dataset licences and ethics approvals early; ensure anonymisation where applicable \\
+        \hline
+        Falling behind schedule & Risk of incomplete implementation or rushed final report & Follow Gantt milestones; reserve final weeks for catch-up if needed; adjust non-core goals accordingly \\
+        \hline
+        Scope creep & Attempting too many extensions beyond core AES system & Limit focus to clearly defined objectives; only pursue optional enhancements once core implementation is complete \\
+        \hline
+    \end{tabular}
+    \end{center}
+
 
 \section*{Resources and Limitations}
-% What resources (hardware, data, software) will you use?
-% Are there any constraints (e.g., no GPU access)?
 
-\section*{References}
-% List your references here using any format (Harvard, IEEE, etc.)
-% Example: Author, "Title," Journal, Year.
+This project will draw upon a combination of computational, data, and academic resources available through the University of Bath and open-source platforms.
+
+\subsection*{Resources}
+
+\begin{itemize}
+    \item \textbf{Datasets:} Publicly available Automated Essay Scoring datasets, particularly the ASAP (Automated Student Assessment Prize) dataset hosted on Kaggle. Other datasets may be used to 
+    supplement or test model generalisability, depending on availability.
+    
+    \item \textbf{Computational Resources:} Access to University of Bath’s High-Performance Computing (HPC) infrastructure, including GPU support where possible. Cloud services such as Google Colab 
+    or Kaggle Kernels may also be used for experimentation or prototyping.
+    
+    \item \textbf{Libraries and Tools:} Python-based machine learning and NLP libraries, including Hugging Face Transformers, Scikit-learn, PyTorch or TensorFlow (depending on final implementation), 
+    and supporting libraries for data processing and visualisations.
+    
+    \item \textbf{Version Control and Documentation:} GitHub will be used for version control, issue tracking, and collaboration (should it be used anywhere). LaTeX will be used for academic report writing and 
+    formatting.
+    
+    \item \textbf{Academic Resources:} Access to online academic journals, papers, and resources via the University of Bath library (e.g., IEEE Xplore, ACL Anthology, JSTOR).
+\end{itemize}
+
+\subsection*{Limitations}
+
+\begin{itemize}
+    \item \textbf{Hardware Constraints:} Training large-scale transformer models on full-length essay data can be computationally expensive. Model size and training configuration may be constrained 
+    by available GPU access and memory limitations.
+    \item \textbf{Dataset Quality and Scope:} The project relies on publicly available datasets, which may not reflect the full diversity of student writing, prompts, or demographic characteristics. 
+    Some datasets may lack metadata needed for fairness analysis.
+    \item \textbf{Time Constraints:} The project is constrained by the fixed MSc dissertation timeline. As such, extensions such as feedback generation, multi-modal input (e.g., handwriting), 
+    or real-time deployment will only be explored if time permits.
+    \item \textbf{Ethical and Legal Restrictions:} Use of student-generated content is limited to datasets with appropriate licenses or ethical clearance. No private or institutionally sensitive data 
+    will be used without explicit approval.
+    \item \textbf{Model Interpretability Trade-offs:} Highly performant models may be less interpretable. There is a trade-off between achieving high predictive accuracy 
+    and ensuring the system remains explainable and educationally useful.
+\end{itemize}
+
 
 
 \end{document}
