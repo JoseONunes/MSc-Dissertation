@@ -26,14 +26,14 @@ feedback generation, or the processing of handwritten text.
 
 Some possible titles include:
 \begin{itemize}
-    \item \textit{Automated Essay Scoring Using Deep Learning}
-    \item \textit{Neural Approaches to Automated Essay Scoring: A Deep Learning Perspective}
+    \item \textit{Automated Assessment of Student Writing Using Deep Learning}
+    \item \textit{Exploring Transformer Architectures for Automated Essay Scoring}
     \item \textit{Transformer-Based Models for Automated Essay Scoring}
-    \item \textit{Evaluating Student Writing with Deep Learning: A Comparative Approach}
-    \item \textit{Automated Essay Scoring with Explainable Deep Learning Architectures}
-    \item \textit{Beyond Accuracy: Fair and Interpretable Deep Learning for Essay Scoring}
-    \item \textit{Multi-modal Essay Assessment: Integrating Handwritten and Typed Text in Neural AES Systems}
-    \item \textit{Benchmarking Traditional and Deep Learning Models for Essay Scoring}
+    \item \textit{From Grade to Guidance: Enabling Feedback Generation in AES Systems}
+    \item \textit{Beyond Scoring: Generating Feedback with Transformer-Based AES}
+    \item \textit{Expanding Automated Essay Scoring to Handwritten Responses Using Deep Learning}
+    \item \textit{Explainable AI for Essay Assessment: A Deep Learning Perspective}
+    \item \textit{Explainable Automated Essay Scoring Using Deep Neural Networks}
 \end{itemize}
 
 
@@ -47,7 +47,7 @@ to address these issues by providing a more consistent and objective grading pro
 
 AES systems aim to address these limitations through computational techniques to evaluate the quality of written text. Early AES systems 
 such as Project Essay Grade, relied very heavily on manually engineered features such as grammar usage, word length, and sentence structure, combined with
-traditional machine learning models. While these systems showed success (e-rater was used in english as a foreign language scoring), they often lacked
+traditional machine learning models. While these systems showed success (e-rater being used in english as a foreign language scoring), they often lacked
 robustness and generalization capabilities.
 
 Recent advancements in deep learning and natural language processing have introduced more sophisticated models and approaches to AES.
@@ -85,7 +85,6 @@ potential for future enhancements such as feedback generation or support for han
     \item \textbf{Evaluate The Performance, Fairness And Interpretability:} \textit{Investigate any issues with Biases, inconsistencies in the methods, as well as
     the models transparency and "trustworthiness".}
     \item \textbf{Explore Potential Enhancements:} \textit{Investigate the potential for future enhancements to the model, such as feedback generation, or multi-modal input.}
-
 \end{enumerate}
 
 \subsection{Research Questions}
@@ -97,38 +96,40 @@ potential for future enhancements such as feedback generation or support for han
 \end{enumerate}
 
 \section*{Background and Related Work}
-Automated Essay Scoring (AES) systems have been in development for over five decades, evolving from rule-based and statistical 
-approaches into increasingly complex machine learning and deep learning technologies. Early developments such as Project Essay 
-Grade (PEG) and e-rater relied on handcrafted features, including high-level syntactic and lexical characteristics. While these 
-methods demonstrated some success and saw real-world application they often struggled to capture the semantic and contextual 
-depth found in students work.
+Automated Essay Scoring (AES) systems have been in development for over fifty years, evolving from statistical 
+and rule based approaches into increasingly sophisticated machine learning and deep learning technologies. Early 
+developments such as Project Essay Grade (PEG) and e-rater relied on handcrafted features, including high-level 
+syntactic and lexical features. While these methods demonstrated some success and saw real-world application they 
+often struggled to capture the semantic and contextual depth found in students work.
 
-With the growth of more data focused approaches in natural language processing (NLP), AES has increasingly adopted machine learning 
-techniques. Traditional models such as support vector machines (SVM), random forests, and ridge regression were trained on 
-handcrafted features to predict human-marked essay scores. However, these models were still limited by their reliance on manually 
-created inputs, which creates constraints with the scalability and generalization across writing prompts and student population 
-groups.
+With the growth of more data focused approaches in natural language processing (NLP), AES has increasingly adopted 
+machine learning techniques. Traditional models such as support vector machines (SVM), random forests, and ridge 
+regression were trained on handcrafted features to predict human-marked essay scores. However, these models were 
+still limited by their reliance on manually created inputs, which creates constraints with the scalability and 
+generalization across writing prompts and student population groups.
 
-The growth of deep learning, particularly with transformer-based models, has significantly advanced AES research. Pre-trained 
-language models such as \textbf{BERT} and \textbf{RoBERTa} have demonstrated strong performance across a wide range of NLP tasks, thanks to their 
-ability to model contextual dependencies within text. When compared to more typical machine learning techniques, studies using BERT 
-for AES have shown notable gains in predicting accuracy, especially when using benchmark datasets such as the \textbf{ASAP (Automated 
-Student Assessment Prize) corpus}.
+The growth of deep learning, particularly with transformer-based models, has significantly advanced AES research. 
+Pre-trained language models such as BERT and RoBERTa have demonstrated a impressive results across ranging NLP tasks, 
+thanks to their ability to model contextual relationships within text. When compared to more typical machine learning 
+techniques, studies using BERT for AES have shown substantial gains in accuracy, especially when using benchmark datasets 
+such as the ASAP (Automated Student Assessment Prize) corpus.
 
-Despite these advancements, a number of obstacles still exists, deep learning models frequently operate as "black boxes", providing little room 
-for interpretation. This is a major drawback for AES, because user trust and educational integration rely on score reasoning and openness.
-Second, there are now worries about algorithmic bias, especially when it comes to under-represented student groups or non-native english speakers.
-These issues raise questions about fairness, generalisability, and the ethical use of AES in high-stakes contexts. These issues raise questions about 
-fairness, generalisability, and the ethical use of AES in high-stakes contexts.
+Despite these advancements, a number of obstacles still exists, deep learning models frequently act as ”black boxes”, providing 
+little to no room for interpretation. This is a major drawback for AES, because user trust and educational integration rely on the 
+reasoning behind a score. Second, in more recent years there is a growing concern about algorithmic bias, especially when it comes 
+to under-represented student groups or non-native english speakers. These issues raise questions about fairness, generalisability, 
+and the ethical use of AES in high-stakes contexts. These issues raise questions about fairness, generalisability, and the ethical 
+use of AES in high-stakes contexts.
 
-Furthermore, much of current AES work focuses on holistic scoring without exploring the formative aspects of feedback, rubric-based scoring, or the 
-integration of multi-modal inputs. Expandability methods such as SHAP or attention-based visualizations have had lots of research recently to focus
-on improving the models transparency, while hybrid systems that combine neural and symbolic components have showed promise in improving interpretability.
-and control.
+Furthermore, much of current AES work focuses on holistic scoring without exploring the formative aspects of feedback, rubric-based scoring, 
+or the integration of multi-modal inputs. Expandability methods such as SHAP or attention-based visualizations have had lots of research 
+recently to focus on improving the models transparency, while hybrid systems that combine neural and symbolic components have showed 
+promise in improving interpretability. and control. This project builds on these advancements by developing an AES model using deep 
+learning, evaluating its performance and fairness, and investigating potential pathways avenues for expansion.
 
-This project builds on these advancements by developing an AES model using deep learning, evaluating its performance and fairness, and exploring potential 
-avenues for expansion. By benchmarking against traditional baselines and considering explainability and ethical implications, this work aims to contribute  
-to the growing body of research seeking to make AES systems more robust, transparent, and educationally useful.
+Through comparing results against against traditional baselines and considering explainability and ethical implications, this work aims 
+to contribute to all research seeking to make AES systems more robust, transparent, and educationally useful.
+
 
 \section*{Project Plan}
 \subsection*{Task Breakdown}
@@ -182,6 +183,7 @@ as the week commencing March 31\textsuperscript{st}.
 \end{ganttchart}
 }
 
+\pagebreak
 \subsection*{Dependencies and Risks}
 
 This projects tasks are sequential in nature, with each task building upon the findings of the previous one. due to that I have decided to omit a discussion for the dependencies. However 

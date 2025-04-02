@@ -1,7 +1,7 @@
-PWD /Users/oscar/Desktop/uni/Bath/Disserataion/Project Plan:Breif/Documents
+PWD /Users/oscar/Desktop/uni/Bath/MSc-Dissertation/Project Plan:Breif/Documents
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/web2c/texmf.cnf
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/oscar/Desktop/uni/Bath/Disserataion/Project Plan:Breif/Documents/Project-Brief.tex
+INPUT /Users/oscar/Desktop/uni/Bath/MSc-Dissertation/Project Plan:Breif/Documents/Project-Brief.tex
 OUTPUT Project-Brief.log
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/article.cls
 INPUT /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/article.cls
