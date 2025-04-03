@@ -1,0 +1,293 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{attali2006e_rater}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=db2e28e0923b75e0958fc1308e65c4f0}{%
+           family={Attali},
+           familyi={A\bibinitperiod},
+           given={Yigal},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f974925c5c6cca1d67fd604cc9fc9c79}{%
+           family={Burstein},
+           familyi={B\bibinitperiod},
+           given={Jill},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3f6b9201486e63ff0f021b82fbe61068}
+      \strng{fullhash}{3f6b9201486e63ff0f021b82fbe61068}
+      \strng{fullhashraw}{3f6b9201486e63ff0f021b82fbe61068}
+      \strng{bibnamehash}{3f6b9201486e63ff0f021b82fbe61068}
+      \strng{authorbibnamehash}{3f6b9201486e63ff0f021b82fbe61068}
+      \strng{authornamehash}{3f6b9201486e63ff0f021b82fbe61068}
+      \strng{authorfullhash}{3f6b9201486e63ff0f021b82fbe61068}
+      \strng{authorfullhashraw}{3f6b9201486e63ff0f021b82fbe61068}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Technology, Learning and Assessment}
+      \field{number}{3}
+      \field{title}{Automated Essay Scoring With e-rater® V.2}
+      \field{volume}{4}
+      \field{year}{2006}
+      \field{pages}{1\bibrangedash 21}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1002/j.2333-8504.2006.tb02016.x
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1002/j.2333-8504.2006.tb02016.x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/j.2333-8504.2006.tb02016.x
+      \endverb
+    \endentry
+    \entry{devlin2019bert}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=13202969e372bc82318f9629cbdd199b}{%
+           family={Devlin},
+           familyi={D\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a45784fe7163b45f11d166564f5d24b6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Ming-Wei},
+           giveni={M\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dde73b4194f5bc4230c4808f3fc1534}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b92aa283415413bb8d2a1548716d0c7d}{%
+           family={Toutanova},
+           familyi={T\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{fullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{fullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{bibnamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorbibnamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authornamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorfullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorfullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1810.04805}
+      \field{title}{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1810.04805
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1810.04805
+      \endverb
+    \endentry
+    \entry{liu2019roberta}{article}{}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=94530daf7a9db4abe89cfb22935373eb}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yinhan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b13aa2bad5258fa5ef7a733f2d305a49}{%
+           family={Ott},
+           familyi={O\bibinitperiod},
+           given={Myle},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78a420900f50a8470ad085fb05231bf6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Naman},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e483b52ce2cd3ba2fd08e7bf4fef4ff0}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Jingfei},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5bfa941bcdbfecb5f3e42bb6ac9eb5f}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Mandar},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aed188db3fc6855ac5666aa14e04a3bb}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Danqi},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=038965e189161e03f6255a4278c280a1}{%
+           family={Levy},
+           familyi={L\bibinitperiod},
+           given={Omer},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c97f53fdeeb04c28de19e3324cb4bc0a}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1dbd3a5b42828fb2cebd7786488ba425}{%
+           family={Zettlemoyer},
+           familyi={Z\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b97236dd2d1a104fc5cf9660dd5582e}{%
+           family={Stoyanov},
+           familyi={S\bibinitperiod},
+           given={Veselin},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bbac34a28b7aba5cd543f7c72e0d987d}
+      \strng{fullhash}{7579c765ce38b2c34c8f9768ec3bc342}
+      \strng{fullhashraw}{7579c765ce38b2c34c8f9768ec3bc342}
+      \strng{bibnamehash}{bbac34a28b7aba5cd543f7c72e0d987d}
+      \strng{authorbibnamehash}{bbac34a28b7aba5cd543f7c72e0d987d}
+      \strng{authornamehash}{bbac34a28b7aba5cd543f7c72e0d987d}
+      \strng{authorfullhash}{7579c765ce38b2c34c8f9768ec3bc342}
+      \strng{authorfullhashraw}{7579c765ce38b2c34c8f9768ec3bc342}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1907.11692}
+      \field{title}{RoBERTa: A Robustly Optimized BERT Pretraining Approach}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1907.11692
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1907.11692
+      \endverb
+    \endentry
+    \entry{page1966imminence}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1b9f91e23d364d362d8547a5c812ee97}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={Ellis\bibnamedelima Batten},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Phi Delta Kappa International}%
+      }
+      \strng{namehash}{1b9f91e23d364d362d8547a5c812ee97}
+      \strng{fullhash}{1b9f91e23d364d362d8547a5c812ee97}
+      \strng{fullhashraw}{1b9f91e23d364d362d8547a5c812ee97}
+      \strng{bibnamehash}{1b9f91e23d364d362d8547a5c812ee97}
+      \strng{authorbibnamehash}{1b9f91e23d364d362d8547a5c812ee97}
+      \strng{authornamehash}{1b9f91e23d364d362d8547a5c812ee97}
+      \strng{authorfullhash}{1b9f91e23d364d362d8547a5c812ee97}
+      \strng{authorfullhashraw}{1b9f91e23d364d362d8547a5c812ee97}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phi Delta Kappan}
+      \field{number}{5}
+      \field{title}{The Imminence of Grading Essays by Computer}
+      \field{volume}{47}
+      \field{year}{1966}
+      \field{pages}{238\bibrangedash 243}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.2307/1161893
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/1161893
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/1161893
+      \endverb
+    \endentry
+    \entry{shermis2013handbook}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d403adf0bcdbae3a8cf3d3dbe65de80a}{%
+           family={Shermis},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f974925c5c6cca1d67fd604cc9fc9c79}{%
+           family={Burstein},
+           familyi={B\bibinitperiod},
+           given={Jill},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{1391eca939e7577ecf8b405ef52c5400}
+      \strng{fullhash}{1391eca939e7577ecf8b405ef52c5400}
+      \strng{fullhashraw}{1391eca939e7577ecf8b405ef52c5400}
+      \strng{bibnamehash}{1391eca939e7577ecf8b405ef52c5400}
+      \strng{authorbibnamehash}{1391eca939e7577ecf8b405ef52c5400}
+      \strng{authornamehash}{1391eca939e7577ecf8b405ef52c5400}
+      \strng{authorfullhash}{1391eca939e7577ecf8b405ef52c5400}
+      \strng{authorfullhashraw}{1391eca939e7577ecf8b405ef52c5400}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Handbook of Automated Essay Evaluation: Current Applications and New Directions}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://www.routledge.com/Handbook-of-Automated-Essay-Evaluation/Shermis-Burstein/p/book/9781138024574
+      \endverb
+      \verb{url}
+      \verb https://www.routledge.com/Handbook-of-Automated-Essay-Evaluation/Shermis-Burstein/p/book/9781138024574
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

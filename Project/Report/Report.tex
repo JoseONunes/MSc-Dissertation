@@ -6,6 +6,9 @@
 \usepackage{setspace}
 \usepackage{fancyhdr}
 \usepackage{caption}
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\addbibresource{references.bib}
+
 
 \onehalfspacing
 \pagestyle{fancy}
@@ -16,7 +19,7 @@
 
 \title{Developing a Transformer-Based Automated Essay Scoring System with Explainability Considerations}
 \author{Oscar Dos Santos Nunes}
-\date{September 2025}
+\date{March 2025 - September 2025}
 \maketitle
 
 \tableofcontents
@@ -25,6 +28,38 @@
 \chapter{Introduction}
 
 \section{Background and Context}
+
+\section{Background and Context}
+
+Automated Essay Scoring (AES) systems have been in development for over fifty years, evolving from statistical and rule-based approaches into increasingly sophisticated machine learning and deep 
+learning technologies. Early developments such as Project Essay Grade (PEG) \parencite{page1966imminence} and e-rater \parencite{attali2006e_rater} relied on handcrafted features, including high-level 
+syntactic and lexical features. While these methods demonstrated some success and saw real-world application, they often struggled to capture the semantic and contextual depth found in student writing 
+\parencite{shermis2013handbook}.
+
+With the growth of more data-focused approaches in natural language processing (NLP), AES has increasingly adopted machine learning techniques. Traditional models such as support vector machines (SVM), 
+random forests, and ridge regression were trained on handcrafted features to predict human-marked essay scores. However, these models were still limited by their reliance on manually created inputs, 
+which creates constraints with scalability and generalisation across writing prompts and student population groups.
+
+The growth of deep learning, particularly with transformer-based models, has significantly advanced AES research. Pre-trained language models such as BERT \parencite{devlin2019bert} and RoBERTa 
+\parencite{liu2019roberta} have demonstrated impressive results across various NLP tasks, thanks to their ability to model contextual relationships within text. When compared to more typical 
+machine learning techniques, studies using BERT for AES have shown substantial gains in accuracy, especially when using benchmark datasets such as the ASAP (Automated Student Assessment Prize) 
+corpus \parencite{taghipour2016neural}.
+
+Despite these advancements, a number of obstacles still exist. Deep learning models frequently act as ``black boxes'', providing little to no room for interpretation. This is a major drawback for 
+AES, as user trust and educational integration rely on the reasoning behind a score. In recent years, there has also been growing concern about algorithmic bias, particularly when scoring responses 
+from under-represented student groups or non-native English speakers \parencite{blodgett2020language}. These issues raise questions about fairness, generalisability, and the ethical use of AES in 
+high-stakes contexts.
+
+Furthermore, much of current AES work focuses on holistic scoring without exploring the formative aspects of feedback, rubric-based scoring, or the integration of multi-modal inputs. Expandability 
+methods such as SHAP \parencite{lundberg2017unified} or attention-based visualisations have been actively researched as a means of improving model transparency. Hybrid systems that combine neural 
+and symbolic components have also shown promise in enhancing interpretability and control.
+
+This project builds on these advancements by developing an AES model using deep learning, evaluating its performance and fairness, and investigating potential pathways for expansion. Through comparing 
+results against traditional baselines and considering explainability and ethical implications, this work aims to contribute to research seeking to make AES systems more robust, transparent, and 
+educationally useful.
+
+
+
 
 
 \section{Problem Statement}
@@ -77,9 +112,9 @@
 \section{Answers to Research Questions}
 \section{Future Work}
 
-\chapter*{References}
-\addcontentsline{toc}{chapter}{References}
-% Use Bath Harvard style via BibTeX or manual formatting
+
+\printbibliography
+
 
 \appendix
 \chapter{Code Snippets}
