@@ -2381,6 +2381,31 @@
     <bcf:citekey order="6" intorder="1">taghipour2016neural</bcf:citekey>
     <bcf:citekey order="7" intorder="1">blodgett2020language</bcf:citekey>
     <bcf:citekey order="8" intorder="1">lundberg2017unified</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">page2003</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">e-rater2006</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">page2003</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">dikli2006</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">devlin2019bert</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">liu2019roberta</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">devlin2019bert</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">beigman2021limitations</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">page1966imminence</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">e-rater2006</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">landauer2003iea</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">shermis2013handbook</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">taghipour2016neural</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">beigman2021narrative</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">blodgett2020language</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">lundberg2017unified</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Shermis2013</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">Taghipour2016</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Williamson2012</bcf:citekey>
+    <bcf:citekey order="26" intorder="2">Yannakoudakis2011</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">litman2024fairness</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">blanchard2013toefl</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">litman2024fairness</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">blanchard2013toefl</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Sgengjie2024acl</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  2 APR 2025 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  4 MAY 2025 18:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2024/06/29 v1.4n Standard LaTeX document class
-(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count196
 \c@chapter=\count197
@@ -242,6 +242,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip54
 ) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
+) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks24
+\verbatim@line=\toks25
+\verbatim@in@stream=\read2
 ) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip55
@@ -258,91 +263,123 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip66
 \f@nch@widthC=\skip67
 \f@nch@widthR=\skip68
-\@temptokenb=\toks24
-) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/caption/caption.sty
+\@temptokenb=\toks26
+) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
+ (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/soul/soul-ori.sty
+Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
+\SOUL@word=\toks27
+\SOUL@lasttoken=\toks28
+\SOUL@syllable=\toks29
+\SOUL@cmds=\toks30
+\SOUL@buffer=\toks31
+\SOUL@token=\toks32
+\SOUL@syllgoal=\dimen165
+\SOUL@syllwidth=\dimen166
+\SOUL@charkern=\dimen167
+\SOUL@hyphkern=\dimen168
+\SOUL@dimen=\dimen169
+\SOUL@dimeni=\dimen170
+\SOUL@minus=\count298
+\SOUL@comma=\count299
+\SOUL@apo=\count300
+\SOUL@grave=\count301
+\SOUL@spaceskip=\skip69
+\SOUL@ttwidth=\dimen171
+\SOUL@uldp=\dimen172
+\SOUL@ulht=\dimen173
+) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen165
-\captionmargin=\dimen166
-\caption@leftmargin=\dimen167
-\caption@rightmargin=\dimen168
-\caption@width=\dimen169
-\caption@indent=\dimen170
-\caption@parindent=\dimen171
-\caption@hangindent=\dimen172
+\caption@tempdima=\dimen174
+\captionmargin=\dimen175
+\caption@leftmargin=\dimen176
+\caption@rightmargin=\dimen177
+\caption@width=\dimen178
+\caption@indent=\dimen179
+\caption@parindent=\dimen180
+\caption@hangindent=\dimen181
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count298
-\c@continuedfloat=\count299
+\c@caption@flags=\count302
+\c@continuedfloat=\count303
 Package caption Info: hyperref package is loaded.
-) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
+ (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+ (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count300
+\lrq@indent=\count304
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count301
-\c@listtotal=\count302
-\c@listcount=\count303
-\c@liststart=\count304
-\c@liststop=\count305
-\c@citecount=\count306
-\c@citetotal=\count307
-\c@multicitecount=\count308
-\c@multicitetotal=\count309
-\c@instcount=\count310
-\c@maxnames=\count311
-\c@minnames=\count312
-\c@maxitems=\count313
-\c@minitems=\count314
-\c@citecounter=\count315
-\c@maxcitecounter=\count316
-\c@savedcitecounter=\count317
-\c@uniquelist=\count318
-\c@uniquename=\count319
-\c@refsection=\count320
-\c@refsegment=\count321
-\c@maxextratitle=\count322
-\c@maxextratitleyear=\count323
-\c@maxextraname=\count324
-\c@maxextradate=\count325
-\c@maxextraalpha=\count326
-\c@abbrvpenalty=\count327
-\c@highnamepenalty=\count328
-\c@lownamepenalty=\count329
-\c@maxparens=\count330
-\c@parenlevel=\count331
-\blx@tempcnta=\count332
-\blx@tempcntb=\count333
-\blx@tempcntc=\count334
-\c@blx@maxsection=\count335
-\blx@maxsegment@0=\count336
-\blx@notetype=\count337
-\blx@parenlevel@text=\count338
-\blx@parenlevel@foot=\count339
-\blx@sectionciteorder@0=\count340
-\blx@sectionciteorderinternal@0=\count341
-\blx@entrysetcounter=\count342
-\blx@biblioinstance=\count343
-\labelnumberwidth=\skip69
-\labelalphawidth=\skip70
-\biblabelsep=\skip71
-\bibitemsep=\skip72
-\bibnamesep=\skip73
-\bibinitsep=\skip74
-\bibparsep=\skip75
-\bibhang=\skip76
-\blx@bcfin=\read2
+\c@tabx@nest=\count305
+\c@listtotal=\count306
+\c@listcount=\count307
+\c@liststart=\count308
+\c@liststop=\count309
+\c@citecount=\count310
+\c@citetotal=\count311
+\c@multicitecount=\count312
+\c@multicitetotal=\count313
+\c@instcount=\count314
+\c@maxnames=\count315
+\c@minnames=\count316
+\c@maxitems=\count317
+\c@minitems=\count318
+\c@citecounter=\count319
+\c@maxcitecounter=\count320
+\c@savedcitecounter=\count321
+\c@uniquelist=\count322
+\c@uniquename=\count323
+\c@refsection=\count324
+\c@refsegment=\count325
+\c@maxextratitle=\count326
+\c@maxextratitleyear=\count327
+\c@maxextraname=\count328
+\c@maxextradate=\count329
+\c@maxextraalpha=\count330
+\c@abbrvpenalty=\count331
+\c@highnamepenalty=\count332
+\c@lownamepenalty=\count333
+\c@maxparens=\count334
+\c@parenlevel=\count335
+\blx@tempcnta=\count336
+\blx@tempcntb=\count337
+\blx@tempcntc=\count338
+\c@blx@maxsection=\count339
+\blx@maxsegment@0=\count340
+\blx@notetype=\count341
+\blx@parenlevel@text=\count342
+\blx@parenlevel@foot=\count343
+\blx@sectionciteorder@0=\count344
+\blx@sectionciteorderinternal@0=\count345
+\blx@entrysetcounter=\count346
+\blx@biblioinstance=\count347
+\labelnumberwidth=\skip70
+\labelalphawidth=\skip71
+\biblabelsep=\skip72
+\bibitemsep=\skip73
+\bibnamesep=\skip74
+\bibinitsep=\skip75
+\bibparsep=\skip76
+\bibhang=\skip77
+\blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language90
-\c@mincomprange=\count344
-\c@maxcomprange=\count345
-\c@mincompwidth=\count346
+\c@mincomprange=\count348
+\c@maxcomprange=\count349
+\c@mincompwidth=\count350
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -352,88 +389,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count347
-\c@savedafterword=\count348
-\c@annotator=\count349
-\c@savedannotator=\count350
-\c@author=\count351
-\c@savedauthor=\count352
-\c@bookauthor=\count353
-\c@savedbookauthor=\count354
-\c@commentator=\count355
-\c@savedcommentator=\count356
-\c@editor=\count357
-\c@savededitor=\count358
-\c@editora=\count359
-\c@savededitora=\count360
-\c@editorb=\count361
-\c@savededitorb=\count362
-\c@editorc=\count363
-\c@savededitorc=\count364
-\c@foreword=\count365
-\c@savedforeword=\count366
-\c@holder=\count367
-\c@savedholder=\count368
-\c@introduction=\count369
-\c@savedintroduction=\count370
-\c@namea=\count371
-\c@savednamea=\count372
-\c@nameb=\count373
-\c@savednameb=\count374
-\c@namec=\count375
-\c@savednamec=\count376
-\c@translator=\count377
-\c@savedtranslator=\count378
-\c@shortauthor=\count379
-\c@savedshortauthor=\count380
-\c@shorteditor=\count381
-\c@savedshorteditor=\count382
-\c@labelname=\count383
-\c@savedlabelname=\count384
-\c@institution=\count385
-\c@savedinstitution=\count386
-\c@lista=\count387
-\c@savedlista=\count388
-\c@listb=\count389
-\c@savedlistb=\count390
-\c@listc=\count391
-\c@savedlistc=\count392
-\c@listd=\count393
-\c@savedlistd=\count394
-\c@liste=\count395
-\c@savedliste=\count396
-\c@listf=\count397
-\c@savedlistf=\count398
-\c@location=\count399
-\c@savedlocation=\count400
-\c@organization=\count401
-\c@savedorganization=\count402
-\c@origlocation=\count403
-\c@savedoriglocation=\count404
-\c@origpublisher=\count405
-\c@savedorigpublisher=\count406
-\c@publisher=\count407
-\c@savedpublisher=\count408
-\c@language=\count409
-\c@savedlanguage=\count410
-\c@origlanguage=\count411
-\c@savedoriglanguage=\count412
-\c@pageref=\count413
-\c@savedpageref=\count414
-\shorthandwidth=\skip77
-\shortjournalwidth=\skip78
-\shortserieswidth=\skip79
-\shorttitlewidth=\skip80
-\shortauthorwidth=\skip81
-\shorteditorwidth=\skip82
-\locallabelnumberwidth=\skip83
-\locallabelalphawidth=\skip84
-\localshorthandwidth=\skip85
-\localshortjournalwidth=\skip86
-\localshortserieswidth=\skip87
-\localshorttitlewidth=\skip88
-\localshortauthorwidth=\skip89
-\localshorteditorwidth=\skip90
+\c@afterword=\count351
+\c@savedafterword=\count352
+\c@annotator=\count353
+\c@savedannotator=\count354
+\c@author=\count355
+\c@savedauthor=\count356
+\c@bookauthor=\count357
+\c@savedbookauthor=\count358
+\c@commentator=\count359
+\c@savedcommentator=\count360
+\c@editor=\count361
+\c@savededitor=\count362
+\c@editora=\count363
+\c@savededitora=\count364
+\c@editorb=\count365
+\c@savededitorb=\count366
+\c@editorc=\count367
+\c@savededitorc=\count368
+\c@foreword=\count369
+\c@savedforeword=\count370
+\c@holder=\count371
+\c@savedholder=\count372
+\c@introduction=\count373
+\c@savedintroduction=\count374
+\c@namea=\count375
+\c@savednamea=\count376
+\c@nameb=\count377
+\c@savednameb=\count378
+\c@namec=\count379
+\c@savednamec=\count380
+\c@translator=\count381
+\c@savedtranslator=\count382
+\c@shortauthor=\count383
+\c@savedshortauthor=\count384
+\c@shorteditor=\count385
+\c@savedshorteditor=\count386
+\c@labelname=\count387
+\c@savedlabelname=\count388
+\c@institution=\count389
+\c@savedinstitution=\count390
+\c@lista=\count391
+\c@savedlista=\count392
+\c@listb=\count393
+\c@savedlistb=\count394
+\c@listc=\count395
+\c@savedlistc=\count396
+\c@listd=\count397
+\c@savedlistd=\count398
+\c@liste=\count399
+\c@savedliste=\count400
+\c@listf=\count401
+\c@savedlistf=\count402
+\c@location=\count403
+\c@savedlocation=\count404
+\c@organization=\count405
+\c@savedorganization=\count406
+\c@origlocation=\count407
+\c@savedoriglocation=\count408
+\c@origpublisher=\count409
+\c@savedorigpublisher=\count410
+\c@publisher=\count411
+\c@savedpublisher=\count412
+\c@language=\count413
+\c@savedlanguage=\count414
+\c@origlanguage=\count415
+\c@savedoriglanguage=\count416
+\c@pageref=\count417
+\c@savedpageref=\count418
+\shorthandwidth=\skip78
+\shortjournalwidth=\skip79
+\shortserieswidth=\skip80
+\shorttitlewidth=\skip81
+\shortauthorwidth=\skip82
+\shorteditorwidth=\skip83
+\locallabelnumberwidth=\skip84
+\locallabelalphawidth=\skip85
+\localshorthandwidth=\skip86
+\localshortjournalwidth=\skip87
+\localshortserieswidth=\skip88
+\localshorttitlewidth=\skip89
+\localshortauthorwidth=\skip90
+\localshorteditorwidth=\skip91
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -443,19 +480,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count415
-\c@textcitetotal=\count416
-\c@textcitemaxnames=\count417
-\c@biburlbigbreakpenalty=\count418
-\c@biburlbreakpenalty=\count419
-\c@biburlnumpenalty=\count420
-\c@biburlucpenalty=\count421
-\c@biburllcpenalty=\count422
+\c@textcitecount=\count419
+\c@textcitetotal=\count420
+\c@textcitemaxnames=\count421
+\c@biburlbigbreakpenalty=\count422
+\c@biburlbreakpenalty=\count423
+\c@biburlnumpenalty=\count424
+\c@biburlucpenalty=\count425
+\c@biburllcpenalty=\count426
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count423
+\c@smartand=\count427
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
@@ -465,8 +502,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count424
-\c@bbx:relatedtotal=\count425
+\c@bbx:relatedcount=\count428
+\c@bbx:relatedtotal=\count429
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
@@ -491,7 +528,7 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2025-01-18 L3 programming layer (loader) 
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count426
+\l__color_backend_stack_int=\count430
 \l__pdf_internal_box=\box54
 ))
 Package biblatex Info: ... and expl3
@@ -503,29 +540,34 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
-\@quotelevel=\count427
-\@quotereset=\count428
- (./Report.aux)
+\@quotelevel=\count431
+\@quotereset=\count432
+
+
+LaTeX Warning: Unused global option(s):
+    [8pt].
+
+(./Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -546,12 +588,12 @@ LaTeX Font Info:    ... okay on input line 18.
 * \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -563,24 +605,24 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count429
-\scratchdimen=\dimen173
+\scratchcounter=\count433
+\scratchdimen=\dimen182
 \scratchbox=\box55
-\nofMPsegments=\count430
-\nofMParguments=\count431
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count432
-\MPscratchDim=\dimen174
-\MPnumerator=\count433
-\makeMPintoPDFobject=\count434
-\everyMPtoPDFconversion=\toks26
+\nofMPsegments=\count434
+\nofMParguments=\count435
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count436
+\MPscratchDim=\dimen183
+\MPnumerator=\count437
+\makeMPintoPDFobject=\count438
+\everyMPtoPDFconversion=\toks34
 ) (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 21.
  (./Report.out) (./Report.out)
 \@outlinefile=\write4
 \openout4 = `Report.out'.
@@ -599,139 +641,126 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Report.bbl' found.
- (./Report.bbl)
-Package biblatex Info: Reference section=0 on input line 18.
-Package biblatex Info: Reference segment=0 on input line 18.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+ (./Report.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                attali2006e_rater
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 21.
+Package biblatex Info: Reference segment=0 on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 [1
 
-{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] (./Report.toc
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.31 ....6}Ethical Considerations}{6}{section.3.6}
-                                                  % [1
-
-])
+{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] (./Report.toc)
 \tf@toc=\write5
 \openout5 = `Report.toc'.
 
 
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 \newpage
+              [1
 
-[2]
+]
 Chapter 1.
 
+LaTeX Warning: Citation 'attali2006e_rater' on page 2 undefined on input line 36.
 
-[3
+
+
+[2
 
 ]
 
+[3{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Overfull \hbox (1.45706pt too wide) in paragraph at lines 100--101
+[]\OT1/cmr/bx/n/10 Explainability and trans-parency:  \OT1/cmr/m/n/10 Ap-ply in-ter-pretabil-ity tech-niques such as SHAP or attention-
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+Overfull \hbox (1.91333pt too wide) in paragraph at lines 115--117
+[]\OT1/cmr/bx/n/10 What trade-offs ex-ist be-tween pre-dic-tive ac-cu-racy, model com-plex-ity, and in-ter-pretabil-
+ []
+
+
 
 [4]
+
+[5]
 Chapter 2.
-
-
-[5
-
-]
-Chapter 3.
 
 
 [6
 
 ]
-Chapter 4.
 
+[7]
 
-[7
+[8]
 
-]
-Chapter 5.
+[9]
 
-
-[8
-
-]
-Chapter 6.
-
-
-[9
-
-]
-
-[10
-
-{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Appendix A.
+[10]
+Chapter 3.
 
 
 [11
 
 ]
-Appendix B.
+
+LaTeX Warning: Reference `sec:label-normalisation' on page 12 undefined on input line 279.
 
 
-[12
 
-]
-Appendix C.
-
+[12]
 
 [13
 
 ]
-Appendix D.
 
-
-[14
-
-] (./Report.aux)
+[14] (./Report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: C6E28EE06AC38C499DA439A7576978C8;8779.
+(rerunfilecheck)             Checksum: 15FA3182C80F66EB68EFB643A5513F6E;4584.
 Package logreq Info: Writing requests to 'Report.run.xml'.
 \openout1 = `Report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19346 strings out of 473190
- 341796 string characters out of 5704335
- 1158147 words of memory out of 5000000
- 42338 multiletter control sequences out of 15000+600000
- 569360 words of font info for 76 fonts, out of 8000000 for 9000
+ 19779 strings out of 473190
+ 350814 string characters out of 5704335
+ 1182036 words of memory out of 5000000
+ 42748 multiletter control sequences out of 15000+600000
+ 569068 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,81p,757b,1448s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Report.pdf (15 pages, 114307 bytes).
+ 75i,12n,81p,757b,1529s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Report.pdf (15 pages, 201889 bytes).
 PDF statistics:
- 415 PDF objects out of 1000 (max. 8388607)
- 380 compressed objects within 4 object streams
- 76 named destinations out of 1000 (max. 500000)
- 409 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 352 PDF objects out of 1000 (max. 8388607)
+ 311 compressed objects within 4 object streams
+ 74 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
