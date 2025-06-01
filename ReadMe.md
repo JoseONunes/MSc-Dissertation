@@ -20,7 +20,7 @@ This project aims to develop a transformer-based Automated Essay Scoring (AES) s
 - LaTeX (VS Code for dissertation writing)
 
 ## 📂 Folder Structure
-
+'''text
 aes-project/
 ├── data/
 │ ├── raw/ # Original ASAP dataset
@@ -33,7 +33,7 @@ aes-project/
 │ └── figures/ # Visuals for dissertation
 ├── requirements.txt # Python dependencies
 └── README.md # You are here
-
+'''
 
 ## ✅ Current Status
 
