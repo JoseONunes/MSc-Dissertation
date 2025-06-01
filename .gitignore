@@ -1,0 +1,47 @@
+# Python virtual environments
+venv/
+aes-env/
+*.py[cod]
+__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Hugging Face datasets and caches
+data/processed/tokenised_asap/
+data/processed/tokenised_asap_split/
+*.arrow
+*.cache/
+datasets_cache/
+huggingface/
+
+# VS Code project config
+.vscode/
+*.code-workspace
+
+# System files
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.gz
+*.blg
+*.bbl
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# OS-generated files
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.swp
