@@ -280,6 +280,76 @@
       \verb https://aclanthology.org/2020.acl-main.485/
       \endverb
     \endentry
+    \entry{burstein2003criterion}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f974925c5c6cca1d67fd604cc9fc9c79}{%
+           family={Burstein},
+           familyi={B\bibinitperiod},
+           given={Jill},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc6c224e437e2bd9912a8f3df0c78341}{%
+           family={Chodorow},
+           familyi={C\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4809f9384db164c4bec54eaa8c227a87}{%
+           family={Leacock},
+           familyi={L\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Association for the Advancement of Artificial Intelligence}%
+      }
+      \strng{namehash}{6ebe192b241a553fbdc9ea6465eb2f8c}
+      \strng{fullhash}{6ebe192b241a553fbdc9ea6465eb2f8c}
+      \strng{fullhashraw}{6ebe192b241a553fbdc9ea6465eb2f8c}
+      \strng{bibnamehash}{6ebe192b241a553fbdc9ea6465eb2f8c}
+      \strng{authorbibnamehash}{6ebe192b241a553fbdc9ea6465eb2f8c}
+      \strng{authornamehash}{6ebe192b241a553fbdc9ea6465eb2f8c}
+      \strng{authorfullhash}{6ebe192b241a553fbdc9ea6465eb2f8c}
+      \strng{authorfullhashraw}{6ebe192b241a553fbdc9ea6465eb2f8c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{AI Magazine}
+      \field{title}{Automated essay evaluation: The criterion online writing evaluation service}
+      \field{year}{2003}
+    \endentry
+    \entry{cohen1968kappa}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eaad07ee1c6ef93a9308150f12c3c2eb}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{fullhash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{fullhashraw}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{bibnamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authorbibnamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authornamehash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authorfullhash}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \strng{authorfullhashraw}{eaad07ee1c6ef93a9308150f12c3c2eb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological Bulletin}
+      \field{title}{Weighted {Kappa}: Nominal Scale Agreement Provision for Scaled Disagreement}
+      \field{volume}{70}
+      \field{year}{1968}
+    \endentry
     \entry{devlin2019bert}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=13202969e372bc82318f9629cbdd199b}{%
@@ -364,6 +434,35 @@
       \endverb
       \verb{url}
       \verb https://ejournals.bc.edu/index.php/jtla/article/view/1646
+      \endverb
+    \endentry
+    \entry{asap2012kaggle}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fec9765921cfa63cb331e42a924c27c}{%
+           family={{Kaggle}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{fullhash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{fullhashraw}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{bibnamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authorbibnamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authornamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authorfullhash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authorfullhashraw}{8fec9765921cfa63cb331e42a924c27c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Automated Student Assessment Prize (ASAP) AES Dataset}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/competitions/asap-aes/data
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/competitions/asap-aes/data
       \endverb
     \endentry
     \entry{landauer2003iea}{incollection}{}{}
@@ -637,6 +736,40 @@
       \verb https://arxiv.org/abs/1705.07874
       \endverb
     \endentry
+    \entry{marti2002iam}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=37034212aa7f9d4b1a8f615f72699238}{%
+           family={Marti},
+           familyi={M\bibinitperiod},
+           given={U.-V.},
+           giveni={U\bibinithyphendelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60fc725664d2ba1eca9fed17c8919730}{%
+           family={Bunke},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5943079a40823e19adfce48c6447c7cb}
+      \strng{fullhash}{5943079a40823e19adfce48c6447c7cb}
+      \strng{fullhashraw}{5943079a40823e19adfce48c6447c7cb}
+      \strng{bibnamehash}{5943079a40823e19adfce48c6447c7cb}
+      \strng{authorbibnamehash}{5943079a40823e19adfce48c6447c7cb}
+      \strng{authornamehash}{5943079a40823e19adfce48c6447c7cb}
+      \strng{authorfullhash}{5943079a40823e19adfce48c6447c7cb}
+      \strng{authorfullhashraw}{5943079a40823e19adfce48c6447c7cb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal on Document Analysis and Recognition}
+      \field{title}{The {IAM}-Database: An English Sentence Database for Offline Handwriting Recognition}
+      \field{volume}{5}
+      \field{year}{2002}
+    \endentry
     \entry{page2003}{book}{}{}
       \name{author}{2}{}{%
         {{un=2,uniquepart=given,hash=6869cf200c5ed3c2d037e4ea46e82682}{%
@@ -811,10 +944,8 @@
       \strng{authornamehash}{45d39d49931bcd569316ebbed0d31c68}
       \strng{authorfullhash}{45d39d49931bcd569316ebbed0d31c68}
       \strng{authorfullhashraw}{45d39d49931bcd569316ebbed0d31c68}
-      \field{extraname}{1}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -831,42 +962,75 @@
       \verb https://aclanthology.org/D16-1193/
       \endverb
     \endentry
-    \entry{Taghipour2016}{inproceedings}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=e48f37666d087755ded373f63c39ae4c}{%
-           family={Taghipour},
-           familyi={T\bibinitperiod},
-           given={Kaveh},
-           giveni={K\bibinitperiod},
+    \entry{vaswani2017attention}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=1,uniquepart=given,hash=214a2b72763c7cbb3521501c66e8f1bd}{%
-           family={Ng},
-           familyi={N\bibinitperiod},
-           given={Hwee\bibnamedelima Tou},
-           giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod},
-           givenun=1}}%
+        {{un=0,uniquepart=base,hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={Łukasz},
+           giveni={Ł\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{45d39d49931bcd569316ebbed0d31c68}
-      \strng{fullhash}{45d39d49931bcd569316ebbed0d31c68}
-      \strng{fullhashraw}{45d39d49931bcd569316ebbed0d31c68}
-      \strng{bibnamehash}{45d39d49931bcd569316ebbed0d31c68}
-      \strng{authorbibnamehash}{45d39d49931bcd569316ebbed0d31c68}
-      \strng{authornamehash}{45d39d49931bcd569316ebbed0d31c68}
-      \strng{authorfullhash}{45d39d49931bcd569316ebbed0d31c68}
-      \strng{authorfullhashraw}{45d39d49931bcd569316ebbed0d31c68}
-      \field{extraname}{2}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradate}{2}
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{fullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \strng{bibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorbibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authorfullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing}
-      \field{title}{A Neural Approach to Automated Essay Scoring}
-      \field{year}{2016}
-      \field{pages}{1882\bibrangedash 1891}
-      \range{pages}{10}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Attention is All You Need}
+      \field{volume}{30}
+      \field{year}{2017}
     \endentry
     \entry{Williamson2012}{article}{}{}
       \name{author}{3}{}{%
@@ -914,6 +1078,72 @@
       \field{pages}{2\bibrangedash 13}
       \range{pages}{12}
     \endentry
+    \entry{yang2016han}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=f4a8a54c69c8bbef09ad99e4212e514c}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zichao},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ff611991cba7ee48521ab941158ac2f}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Diyi},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dc0d6b065a6566cde5d6b93214be1b55}{%
+           family={Dyer},
+           familyi={D\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2d92e419c3b04b620f2b0302581e68c}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Xiaodong},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4d2eb3aadfce48c1b00303f0988e905}{%
+           family={Smola},
+           familyi={S\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c40167d6c8ae2073badfccef0c76767}{%
+           family={Hovy},
+           familyi={H\bibinitperiod},
+           given={Eduard},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{784124944b7e84bc53ec6d10094756f6}
+      \strng{fullhash}{43e59571b57dd8fa322980d8e5755874}
+      \strng{fullhashraw}{43e59571b57dd8fa322980d8e5755874}
+      \strng{bibnamehash}{784124944b7e84bc53ec6d10094756f6}
+      \strng{authorbibnamehash}{784124944b7e84bc53ec6d10094756f6}
+      \strng{authornamehash}{784124944b7e84bc53ec6d10094756f6}
+      \strng{authorfullhash}{43e59571b57dd8fa322980d8e5755874}
+      \strng{authorfullhashraw}{43e59571b57dd8fa322980d8e5755874}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics}
+      \field{title}{Hierarchical Attention Networks for Document Classification}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://aclanthology.org/N16-1174
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/N16-1174
+      \endverb
+    \endentry
     \entry{Yannakoudakis2011}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=dbd61f3c096bbb90493d21827d98efc3}{%
@@ -955,8 +1185,42 @@
       \field{pages}{180\bibrangedash 189}
       \range{pages}{10}
     \endentry
+    \entry{zhang2020automated}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=733e3732b7e3ce5cf2b04cf5e9bd9cf1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Tianyi},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e31465dac9d16dca8bef62347bdc9ce}{%
+           family={Litman},
+           familyi={L\bibinitperiod},
+           given={Diane},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f2313fa74c22d7b5347e78e68d00c7e8}
+      \strng{fullhash}{f2313fa74c22d7b5347e78e68d00c7e8}
+      \strng{fullhashraw}{f2313fa74c22d7b5347e78e68d00c7e8}
+      \strng{bibnamehash}{f2313fa74c22d7b5347e78e68d00c7e8}
+      \strng{authorbibnamehash}{f2313fa74c22d7b5347e78e68d00c7e8}
+      \strng{authornamehash}{f2313fa74c22d7b5347e78e68d00c7e8}
+      \strng{authorfullhash}{f2313fa74c22d7b5347e78e68d00c7e8}
+      \strng{authorfullhashraw}{f2313fa74c22d7b5347e78e68d00c7e8}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 28th International Conference on Computational Linguistics}
+      \field{title}{Automated Essay Scoring: A Survey of the State of the Art}
+      \field{year}{2020}
+      \field{pages}{3739\bibrangedash 3749}
+      \range{pages}{11}
+    \endentry
   \enddatalist
-  \missing{attali2006e_rater}
 \endrefsection
 \endinput
 
