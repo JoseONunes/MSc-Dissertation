@@ -20,20 +20,21 @@ This project aims to develop a transformer-based Automated Essay Scoring (AES) s
 - LaTeX (VS Code for dissertation writing)
 
 ## 📂 Folder Structure
-'''text
+
+```text
 aes-project/
 ├── data/
-│ ├── raw/ # Original ASAP dataset
-│ └── processed/ # Cleaned and tokenised data
-├── notebooks/ # Jupyter notebooks (e.g. data preprocessing)
-├── src/ # Modular source code for models, utils, evaluation
-├── models/ # Saved model weights/checkpoints
-├── outputs/ # Predictions, SHAP plots, etc.
+│   ├── raw/             # Original ASAP dataset
+│   └── processed/       # Cleaned and tokenised data
+├── notebooks/           # Jupyter notebooks (e.g. data preprocessing)
+├── src/                 # Modular source code for models, utils, evaluation
+├── models/              # Saved model weights/checkpoints
+├── outputs/             # Predictions, SHAP plots, etc.
 ├── reports/
-│ └── figures/ # Visuals for dissertation
-├── requirements.txt # Python dependencies
-└── README.md # You are here
-'''
+│   └── figures/         # Visuals for dissertation
+├── requirements.txt     # Python dependencies
+└── README.md            # You are here
+```
 
 ## ✅ Current Status
 
@@ -50,4 +51,3 @@ aes-project/
 ## 📖 Dissertation Structure
 
 The project dissertation is being written in LaTeX and follows a report structure with sections on literature review, methodology, experimental results, and discussion. Integration between code output and the report is managed via shared folders for figures and logs.
-
