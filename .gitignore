@@ -45,3 +45,7 @@ Desktop.ini
 # Temporary files
 *.tmp
 *.swp
+
+
+#zip files
+*.zip 

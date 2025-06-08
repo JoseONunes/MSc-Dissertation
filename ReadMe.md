@@ -22,7 +22,10 @@ This project aims to develop a transformer-based Automated Essay Scoring (AES) s
 ## 📂 Folder Structure
 
 ```text
-aes-project/
+Report Work/
+├── Final Report/        # All of the latex files related to the final report submission
+├── Project Plan:Brief/        # All of the latex files related to the final report submission
+project/
 ├── data/
 │   ├── raw/             # Original ASAP dataset
 │   └── processed/       # Cleaned and tokenised data
@@ -33,7 +36,8 @@ aes-project/
 ├── reports/
 │   └── figures/         # Visuals for dissertation
 ├── requirements.txt     # Python dependencies
-└── README.md            # You are here
+.gitignore               # 
+README.md                # You are here
 ```
 
 ## ✅ Current Status

@@ -1,37 +1,73 @@
-\documentclass[10pt]{report}
-\usepackage[a4paper, margin=2.5cm]{geometry}
-\usepackage{graphicx}
-\usepackage{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath, amssymb}
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{verbatim}
-\usepackage{fancyhdr}
-\usepackage{pgfgantt}
-\usepackage{soul}
-\usepackage{caption}
-\usepackage[style=authoryear,backend=biber]{biblatex}
-\addbibresource{references.bib}
+% Modified by Alessio Guglielmi, 1 October 2023
 
-\onehalfspacing
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{\thepage}
+\documentclass[12pt,a4paper]{report}
+% This document template assumes you will use pdflatex.  If you are using
+% latex and dvipdfmx to translate to pdf, insert dvipdfmx into the options.
 
+\usepackage{Bath-CS-Dissertation}
+\usepackage{natbib}
+\bibliographystyle{bathx}
+
+% Ensure the bibliography file "references.bib" exists in the same directory
+
+\title{\bf Developing a Transformer-Based Automated Essay Scoring System with Explainability Considerations}
+\author{Oscar Dos Satos Nunes}
+\date{MSc In Data Science\\ 
+    The University of Bath\\
+    2024 - 2025}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\title{Developing a Transformer-Based Automated Essay Scoring System with Explainability Considerations}
-\author{Oscar Dos Santos Nunes}
-\date{March 2025 - September 2025}
+\hypersetup{pageanchor=false}
+
+% Set this to the language you want to use in your code listings (if any)
+\lstset{language=Java,breaklines,breakatwhitespace,basicstyle=\small}
+
+\setcounter{page}{0}
+\pagenumbering{roman}
+
 \maketitle
+\newpage
+%
+%% Set this to the number of years consultation prohibition, or 0 if no limit
+%\consultation{0}
+%\newpage
+
+\declaration{$\langle$Dissertation Title$\rangle$}{$\langle$Student Name$\rangle$}
+\newpage
+
+\hypersetup{pageanchor=true}
+
+\abstract
+$\langle$The abstract should appear here. An abstract is a short paragraph describing the aims of the project, what was achieved and what contributions it has made.$\rangle$
+\newpage
 
 \tableofcontents
 \newpage
 
-% -----------------------------------------------------------
-% List of Abbreviations (appearing in this dissertation)
-% -----------------------------------------------------------
+\listoffigures
+\newpage
+
+\listoftables
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acknowledgements}
+
+
+Add any acknowledgements here.
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter*{List of Abbreviations}
 \addcontentsline{toc}{chapter}{List of Abbreviations}
 
@@ -67,23 +103,23 @@ Modern AES research sits at the intersection of educational measurement, natural
 
 \section{Background and Context}
 
-Automated Essay Scoring (AES) systems have been in development for over fifty years, evolving from statistical and rule-based approaches into increasingly sophisticated machine learning and deep learning technologies \parencite{zhang2020automated}. Early developments such as Project Essay Grade (PEG) \parencite{page1966imminence} and e-rater \parencite{e-rater2006} relied on handcrafted features, including high-level syntactic and lexical features. While these methods demonstrated some success and saw real-world application, they often struggled to capture the semantic and contextual depth found in student writing \parencite{shermis2013handbook}.
+Automated Essay Scoring (AES) systems have been in development for over fifty years, evolving from statistical and rule-based approaches into increasingly sophisticated machine learning and deep learning technologies \citep{zhang2020automated}. Early developments such as Project Essay Grade (PEG) \citep{page1966imminence} and e-rater \citep{e-rater2006} relied on handcrafted features, including high-level syntactic and lexical features. While these methods demonstrated some success and saw real-world application, they often struggled to capture the semantic and contextual depth found in student writing \citep{shermis2013handbook}.
 
-With the growth of more data-focused approaches in natural language processing (NLP), AES has increasingly adopted machine learning techniques. Traditional models such as support vector machines (SVM), random forests, and ridge regression were trained on handcrafted features to predict human-marked essay scores \parencite{shermis2013handbook}. However, these models were still limited by their reliance on manually created inputs, which creates constraints with scalability and generalisation across writing prompts and student population groups \parencite{zhang2020automated}.
+With the growth of more data-focused approaches in natural language processing (NLP), AES has increasingly adopted machine learning techniques. Traditional models such as support vector machines (SVM), random forests, and ridge regression were trained on handcrafted features to predict human-marked essay scores \citep{shermis2013handbook}. However, these models were still limited by their reliance on manually created inputs, which creates constraints with scalability and generalisation across writing prompts and student population groups \citep{zhang2020automated}.
 
-The growth of deep learning, particularly with transformer-based models, has significantly advanced AES research \parencite{vaswani2017attention}. Pre-trained language models such as BERT\parencite{devlin2019bert} and RoBERTa \parencite{liu2019roberta} have demonstrated impressive results across various NLP tasks, thanks to their ability to model contextual relationships within text. When compared to more typical machine learning techniques, studies using BERT for AES have shown substantial gains in accuracy, especially when using benchmark datasets such as the ASAP (Automated Student Assessment Prize) corpus \parencite{taghipour2016neural}.
+The growth of deep learning, particularly with transformer-based models, has significantly advanced AES research \citep{vaswani2017attention}. Pre-trained language models such as BERT\citep{devlin2019bert} and RoBERTa \citep{liu2019roberta} have demonstrated impressive results across various NLP tasks, thanks to their ability to model contextual relationships within text. When compared to more typical machine learning techniques, studies using BERT for AES have shown substantial gains in accuracy, especially when using benchmark datasets such as the ASAP (Automated Student Assessment Prize) corpus \citep{taghipour2016neural}.
 
-Despite these advancements, a number of obstacles still exist. Deep learning models frequently act as ``black boxes'', providing little to no room for interpretation \parencite{lundberg2017unified}. This is a major drawback for AES, as user trust and educational integration rely on the reasoning behind a score. In recent years, there has also been growing concern about algorithmic bias, particularly when scoring responses from under-represented student groups or non-native English speakers \parencite{blodgett2020language}. These issues raise questions about fairness, generalisability, and the ethical use of AES in high-stakes contexts.
+Despite these advancements, a number of obstacles still exist. Deep learning models frequently act as ``black boxes'', providing little to no room for interpretation \citep{lundberg2017unified}. This is a major drawback for AES, as user trust and educational integration rely on the reasoning behind a score. In recent years, there has also been growing concern about algorithmic bias, particularly when scoring responses from under-represented student groups or non-native English speakers \citep{blodgett2020language}. These issues raise questions about fairness, generalisability, and the ethical use of AES in high-stakes contexts.
 
-Furthermore, much of current AES work focuses on holistic scoring without exploring the formative aspects of feedback, rubric-based scoring, or the integration of multi-modal inputs. Expandability methods such as SHAP \parencite{lundberg2017unified} or attention-based visualisations have been actively researched as a means of improving model transparency. Hybrid systems that combine neural and symbolic components have also shown promise in enhancing interpretability and control.
+Furthermore, much of current AES work focuses on holistic scoring without exploring the formative aspects of feedback, rubric-based scoring, or the integration of multi-modal inputs. Expandability methods such as SHAP \citep{lundberg2017unified} or attention-based visualisations have been actively researched as a means of improving model transparency. Hybrid systems that combine neural and symbolic components have also shown promise in enhancing interpretability and control.
 
 This project builds on these advancements by developing an AES model using deep learning, evaluating its performance and fairness, and investigating potential pathways for expansion. Through comparing 
 results against traditional baselines and considering explainability and ethical implications, this work aims to contribute to research seeking to make AES systems more robust, transparent, and educationally useful.
 
 \section{Problem Statement}
-The rapid growth of digital education and online learning platforms has brought a fresh interest in an efficient, scalable and consistent method for assessing students' work. Essay writing remains one of the vital methods for evaluating students' understanding of content as well as their ability to communicate ideas and think critically. However, this method requires significant time and resources from educators when marked manually. Human grading is not only more labour-intensive but it is also prone to consistency issues due to marker variability, fatigue and personal bias \parencite{page2003}. In large-scale settings, the demand for a scalable assessment has led to the exploration of AES systems which are capable of mimicking human judgement in evaluating written answers \parencite{burstein2003criterion}.
+The rapid growth of digital education and online learning platforms has brought a fresh interest in an efficient, scalable and consistent method for assessing students' work. Essay writing remains one of the vital methods for evaluating students' understanding of content as well as their ability to communicate ideas and think critically. However, this method requires significant time and resources from educators when marked manually. Human grading is not only more labour-intensive but it is also prone to consistency issues due to marker variability, fatigue and personal bias \citep{page2003}. In large-scale settings, the demand for a scalable assessment has led to the exploration of AES systems which are capable of mimicking human judgement in evaluating written answers \citep{burstein2003criterion}.
 
-Despite the decades of research and development within the field (ranging from early rule-based systems to more modern neural linguistic approaches), there are still significant limitations\parencite{dikli2006}. Traditional AES systems such as e-rater \parencite{e-rater2006} and Project Essay Grade (PEG) \parencite{page2003} relied on shallow linguistic features (e.g. word count, spelling, grammar) that do not capture deeper semantic and argument quality \parencite{dikli2006}. More recent advancements with transformer-based models such as BERT \parencite{devlin2019bert} and RoBERTa \parencite{liu2019roberta} offer promising alternatives through leveraging contextual embeddings and attention mechanisms to better model the meaning and coherence of a given text \parencite{devlin2019bert}. 
+Despite the decades of research and development within the field (ranging from early rule-based systems to more modern neural linguistic approaches), there are still significant limitations\citep{dikli2006}. Traditional AES systems such as e-rater \citep{e-rater2006} and Project Essay Grade (PEG) \citep{page2003} relied on shallow linguistic features (e.g. word count, spelling, grammar) that do not capture deeper semantic and argument quality \citep{dikli2006}. More recent advancements with transformer-based models such as BERT \citep{devlin2019bert} and RoBERTa \citep{liu2019roberta} offer promising alternatives through leveraging contextual embeddings and attention mechanisms to better model the meaning and coherence of a given text \citep{devlin2019bert}. 
 
 However, these models still struggle with generalisation across writing prompts, transparency within their decision-making, and potential still hold bias against certain writing styles or demographic groups \cite{beigman2021limitations}.
 
@@ -99,11 +135,12 @@ This problem is significant both in an academia and practical context. From the 
 
 
 \section{Aims and Objectives}
-The aim of this project is to develop a transformer-based AES system of which achieves high predictive performance while improving upon current work in interpretability and fairness. Through the use of state-of-the-art deep learning models such as BERT and RoBERTa, this work hopes to contribute towards more accurate, trustworthy and scalable alternatives to the more traditional essay marking systems \parencite{devlin2019bert}.
+The aim of this project is to develop a transformer-based AES system of which achieves high predictive performance while improving upon current work in interpretability and fairness. Through the use of state-of-the-art deep learning models such as BERT and RoBERTa, this work hopes to contribute towards more accurate, trustworthy and scalable alternatives to the more traditional essay marking systems \citep{devlin2019bert}.
 
 The primary objectives of this project are as follows:
 \begin{enumerate}
-    \item \textbf{Review and evaluate existing work: } Conduct a comprehensive literature review of traditional and modern AES systems, focusing on their performance, limitations and explainability.
+    \item \textbf{Review and evaluate existing work: } Conduct a comprehensive 
+    review of traditional and modern AES systems, focusing on their performance, limitations and explainability.
     \item \textbf{Data selection and Preprocessing: } Identify appropriate datasets for training and evaluation. Preprocess essays through tokenization, cleaning and normalize score variations to enable 
     effective modelling at later stages.
     \item \textbf{Model development and comparisons: } Implement and fine-tune a transformer-based model for essay scoring. Develop a performance baseline off traditional techniques and previous AES 
@@ -155,60 +192,60 @@ This dissertation is organised as follows.
 
 \chapter{Literature Review}
 \section{Historical Evolution of Automated Essay Scoring}
-The first notable milestone within AES was Ellis Page’s development of Project Essay Grade (PEG) in the 1960s, pioneering the idea of using computers to assess writing quality. PEG worked through the identification of measurable surface features (such as word count, spelling, and grammar) as measures of writing quality, then fitting a regression model in order to predict human-assigned scores. Somewhat surprisingly, with such simple processes, Page reported correlations of around 0.7 between the PEG's scores and that of human raters. While this early work was far lacking in depth compared to that of today’s, it demonstrated the "imminence of grading essays by computer" \parencite{page1966imminence} and generated excitement about the opportunities of algorithms judging complex writing.
+The first notable milestone within AES was Ellis Page’s development of Project Essay Grade (PEG) in the 1960s, pioneering the idea of using computers to assess writing quality. PEG worked through the identification of measurable surface features (such as word count, spelling, and grammar) as measures of writing quality, then fitting a regression model in order to predict human-assigned scores. Somewhat surprisingly, with such simple processes, Page reported correlations of around 0.7 between the PEG's scores and that of human raters. While this early work was far lacking in depth compared to that of today’s, it demonstrated the "imminence of grading essays by computer" \citep{page1966imminence} and generated excitement about the opportunities of algorithms judging complex writing.
 
-After a significant break in research, in the 1990s many more AES systems began being developed. This was largely due to the significant advancements made within computing power and NLP research. One of the more notable advancements was e-rater, developed by the Educational Testing Service (ETS), which was first introduced in 1999, utilising a large set of linguistic features in order to mimic the scoring of a human marker \parencite{e-rater2006}. Around the same time, other paradigms emerged: the Intelligent Essay Assessor (IEA) applied latent semantic reference tests (LSA) to assess content's relevance by comparing the semantic similarity of an essay to a corpus of reference texts. This content-focused approach complemented the earlier surface-feature methods \parencite{landauer2003iea}, demonstrating the shift towards capturing more of an essay's substance and meaning in the automated scoring process.
+After a significant break in research, in the 1990s many more AES systems began being developed. This was largely due to the significant advancements made within computing power and NLP research. One of the more notable advancements was e-rater, developed by the Educational Testing Service (ETS), which was first introduced in 1999, utilising a large set of linguistic features in order to mimic the scoring of a human marker \citep{e-rater2006}. Around the same time, other paradigms emerged: the Intelligent Essay Assessor (IEA) applied latent semantic reference tests (LSA) to assess content's relevance by comparing the semantic similarity of an essay to a corpus of reference texts. This content-focused approach complemented the earlier surface-feature methods \citep{landauer2003iea}, demonstrating the shift towards capturing more of an essay's substance and meaning in the automated scoring process.
 
-In the early 2000s, research into AES increasingly included machine learning algorithms capable of leveraging both surface and content features. The more traditional statistical models were augmented and/or replaced by techniques such as support vector machines (SVM) and Bayesian classifiers, which were trained on large datasets of essays to optimise their scoring accuracy \parencite{shermis2013handbook}. A key event for research was the \textbf{Hewlett Foundation’s Automated Student Assessment Prize (ASAP)} competition in 2012 \parencite{asap2012kaggle},  this released a corpus of ~13,000 scored essays across eight prompts and accelerated progress and benchmarking of what was possible with handcrafted features. In the mid-2010s a new breakthrough was found with the development of deep learning. Neural network-based AES models (beginning with Taghipour and Ng's 2016 RNN model) learned essay representations from the raw text, rather than relying on hand-created features. These models achieved scoring accuracies that were comparable to human raters, often outperforming the previously developed algorithm \parencite{taghipour2016neural}. This rise of deep learning also renewed work on cross-domain scoring (training the model on one prompt but assessing work on another prompt), which had largely been abandoned in the early 2000s due to the lack of generalisability of the models \parencite{beigman2021narrative}.
+In the early 2000s, research into AES increasingly included machine learning algorithms capable of leveraging both surface and content features. The more traditional statistical models were augmented and/or replaced by techniques such as support vector machines (SVM) and Bayesian classifiers, which were trained on large datasets of essays to optimise their scoring accuracy \citep{shermis2013handbook}. A key event for research was the \textbf{Hewlett Foundation’s Automated Student Assessment Prize (ASAP)} competition in 2012 \citep{asap2012kaggle},  this released a corpus of ~13,000 scored essays across eight prompts and accelerated progress and benchmarking of what was possible with handcrafted features. In the mid-2010s a new breakthrough was found with the development of deep learning. Neural network-based AES models (beginning with Taghipour and Ng's 2016 RNN model) learned essay representations from the raw text, rather than relying on hand-created features. These models achieved scoring accuracies that were comparable to human raters, often outperforming the previously developed algorithm \citep{taghipour2016neural}. This rise of deep learning also renewed work on cross-domain scoring (training the model on one prompt but assessing work on another prompt), which had largely been abandoned in the early 2000s due to the lack of generalisability of the models \citep{beigman2021narrative}.
 
-Alongside the improvements in accuracy, more recent work has brought attention towards AES systems’ fairness, validity, and explainability. It is increasingly recognised that AES systems must not only just be reliable but also fair and transparent with its actions. Recent work has analysed for algorithmic favouring or penalising of certain groups. For example, studies have checked for biases in scores related to demographics (e.g. native language or gender), finding that in some cases performance can be significantly skewed \parencite{blodgett2020language}. In parallel, research also stresses the importance of making the "black box" of deep learning models more interpretable. The latest systems attempt to provide feedback on the writing tasks, such as breaking the score down into a series of sub-scores looking at organisation, grammar, content and style. This push for explainability is driven by the need for trust and accountability within an educational context, where students and educators require an understanding of how the system arrived at its scores \parencite{lundberg2017unified}.
+Alongside the improvements in accuracy, more recent work has brought attention towards AES systems’ fairness, validity, and explainability. It is increasingly recognised that AES systems must not only just be reliable but also fair and transparent with its actions. Recent work has analysed for algorithmic favouring or penalising of certain groups. For example, studies have checked for biases in scores related to demographics (e.g. native language or gender), finding that in some cases performance can be significantly skewed \citep{blodgett2020language}. In parallel, research also stresses the importance of making the "black box" of deep learning models more interpretable. The latest systems attempt to provide feedback on the writing tasks, such as breaking the score down into a series of sub-scores looking at organisation, grammar, content and style. This push for explainability is driven by the need for trust and accountability within an educational context, where students and educators require an understanding of how the system arrived at its scores \citep{lundberg2017unified}.
 
 In summary, over the last 50 years, AES has developed from simple rule-based systems to complex deep learning models. The field has shifted from a focus on surface features to a more nuanced understanding of content and context, with an ever growing focus on fairness and explainability. This evolution reflects the broader trends in NLP and machine learning, as well as the increasing importance of ethical considerations in AI applications.
 
 \section{Rule-Based and Traditional ML Methods}
-Prior to the adoption of deep learning, AES systems were primarily developed using rule-based techniques and classic ML algorithms \parencite{shermis2013handbook}. These systems relied on predefined features, crafted by expects, in order to model aspects of writing quality such as grammar, coherence, structure and vocabulary. 
+Prior to the adoption of deep learning, AES systems were primarily developed using rule-based techniques and classic ML algorithms \citep{shermis2013handbook}. These systems relied on predefined features, crafted by expects, in order to model aspects of writing quality such as grammar, coherence, structure and vocabulary. 
 
 Early AES systems, such as PEG and e-rater, used deterministic formulae for scoring of which combine metrics like word count, average sentence length, character diversity and error frequency. These system offered interpretable outputs and performed well within their constrained environments. However, they required significant manual effort in order to design and maintain. Their reliance on shallow indicators led to them being brittle and often poorly generalised across different prompts, genres and writer population groups.
 
-As computational methods improved, statistic based ML models replaced the hard-coded scoring rules. Algorithms such as linear regression, decision trees, random forests and SVMs trained on feature vectors extracted from essays. These features commonly included syntactic parse statistics, discourse structure elements and genre specific indicators aligning with the human rubrics \parencite{taghipour2016neural}.
+As computational methods improved, statistic based ML models replaced the hard-coded scoring rules. Algorithms such as linear regression, decision trees, random forests and SVMs trained on feature vectors extracted from essays. These features commonly included syntactic parse statistics, discourse structure elements and genre specific indicators aligning with the human rubrics \citep{taghipour2016neural}.
 
 Although these models improved predictive flexibility and allowed for prompt adaption,   they still suffered from key limitations. Notably, the require a significant amount of feature engineering, highly sensitive to feature selection quality and lacked the ability to capture semantic meaning. As a result, they often failed to generalise to new prompts and writing styles, as well as struggling with deeper linguistic aspects such as coherence, argument structure and tone. 
 
 It was these limitations that ultimately created the shift toward neural network approaches, of which aimed to learn high-level representations directly from text. The introduction of deep learning marked as a major turning point in AES development, reducing reliance on manual features and offer improved generalisability, scalability and scoring accuracy. 
 
 \section{Deep Learning and Transformer-Based Models}
-The introduction of deep learning marked a key turning points for AES systems, allowing for models to learn features directly from raw text over the previous reliance on hand-crafted inputs. Early neural networks such as Taghipour and Ng's(2016) RNN-rule based approach achieved near-human scoring through modelling sequential dependencies in the texts. Hierarchical and attention-based networks followed this, which captured higher-level essay structures and enabled better interpretability \parencite{yang2016han}. These architectures offered improved generalisation compared to traditional methods, however the performance gains where still limited by their sequential processes.
+The introduction of deep learning marked a key turning points for AES systems, allowing for models to learn features directly from raw text over the previous reliance on hand-crafted inputs. Early neural networks such as Taghipour and Ng's(2016) RNN-rule based approach achieved near-human scoring through modelling sequential dependencies in the texts. Hierarchical and attention-based networks followed this, which captured higher-level essay structures and enabled better interpretability \citep{yang2016han}. These architectures offered improved generalisation compared to traditional methods, however the performance gains where still limited by their sequential processes.
 
-Transformer based models such as BERT and RoBERTa brought a significant boost to AES system capabilities. The models utilise self attention mechanisms to encode complex relationships within the text, allowing for an understanding of semantics, coherence and broad patters more effectively. Fine-tuning transformers on AES datasets such as ASAP has consistently outperformed prior approaches across both accuracy and generalisability benchmarks \parencite{taghipour2016neural}.
+Transformer based models such as BERT and RoBERTa brought a significant boost to AES system capabilities. The models utilise self attention mechanisms to encode complex relationships within the text, allowing for an understanding of semantics, coherence and broad patters more effectively. Fine-tuning transformers on AES datasets such as ASAP has consistently outperformed prior approaches across both accuracy and generalisability benchmarks \citep{taghipour2016neural}.
 
-However, while transformers has provided strong predictive performance, they introduce many challenges with regards to explainability and fairness. These models act as "black boxes" with very limited transparency as to how a decision is made\parencite{lundberg2017unified}. This is highly problematic within the setting of education as stakeholders will require an insight into scoring rationales. Furthermore, models trained on specific prompts may not generalise well, and there are many concerns about potential algorithmic-biases that may favour or penalise certain groups of students.
+However, while transformers has provided strong predictive performance, they introduce many challenges with regards to explainability and fairness. These models act as "black boxes" with very limited transparency as to how a decision is made\citep{lundberg2017unified}. This is highly problematic within the setting of education as stakeholders will require an insight into scoring rationales. Furthermore, models trained on specific prompts may not generalise well, and there are many concerns about potential algorithmic-biases that may favour or penalise certain groups of students.
 
 Regardless of these drawbacks, transformer based models are currently the state-of-the-art within AES systems. The ever ongoing research into explainable AI and cross-prompt generalisation is begging to address these shortcomings, suggesting that more robust and fair systems are on the horizon.
 
 \subsection{Transformer‑Based Models and Contextual Embeddings}
-The shift form recurrent networks to self-attention based architectures has reshaped the field of AES research. Building on the encoder introduced by Vaswani et al. \parencite{vaswani2017attention}, pre-trained language models such as BERT \parencite{devlin2019bert} and RoBERTa \parencite{liu2019roberta} encode deep contextual embeddings without the requirements of hand crafted features. Fine tuning these on essay corpora yields QWK gains of up to 0.10 over ridge-regression based model baselines \parencite{taghipour2016neural}.
+The shift form recurrent networks to self-attention based architectures has reshaped the field of AES research. Building on the encoder introduced by Vaswani et al. \citep{vaswani2017attention}, pre-trained language models such as BERT \citep{devlin2019bert} and RoBERTa \citep{liu2019roberta} encode deep contextual embeddings without the requirements of hand crafted features. Fine tuning these on essay corpora yields QWK gains of up to 0.10 over ridge-regression based model baselines \citep{taghipour2016neural}.
 
 Prompt-agnostic transformers approaches have also retained around 90\% of their performance after label normalisation, suggesting stronger capabilities of generalisation in comparisons to RNNs or the Hierarchical Attention Networks (HANs)
  
 Transformer encoders are therefore the standardised backbone of modern AES; this project adopts a RoBERTa‑base variant for developing prompt‑agnostic scoring.
 
 \subsection{Explainability Technologies}
-Interpretability is vital for development in an educational environment. SHAP \parencite{lundberg2017unified} offers model-agnostic local explanations by identifying token-level importance through Shapley values. Attention roll-out and Integrated Gradients provide a less computational complex alternatives, however not always as reliable. Counterfactual perturbations are used to aid in the verification of models attesting to rubric-relevant markers over the prompt-specific features.
+Interpretability is vital for development in an educational environment. SHAP \citep{lundberg2017unified} offers model-agnostic local explanations by identifying token-level importance through Shapley values. Attention roll-out and Integrated Gradients provide a less computational complex alternatives, however not always as reliable. Counterfactual perturbations are used to aid in the verification of models attesting to rubric-relevant markers over the prompt-specific features.
 
 Among the available techniques SHAP provided consistent, reliable and human-readable rationale, aligning with the projects goals of improving transparency.
 
 \subsection{Fairness Auditing Toolkits and Metrics}
-Bias analysis in AES typically refers to QWK gaps, equal-opportunity difference and calibration errors. Open-source libraries such as aequitas and fairlearn automate these metrics and  provide visual diagnostics \parencite{litman2024fairness}. 
+Bias analysis in AES typically refers to QWK gaps, equal-opportunity difference and calibration errors. Open-source libraries such as aequitas and fairlearn automate these metrics and  provide visual diagnostics \citep{litman2024fairness}. 
 
-Recent studies have shown significant score discrepancies between native and non-native English writers, as well as across different genders\parencite{blodgett2020language}. Mitigation strategies include data re-balancing, adversarial training and post-hoc calibration.
+Recent studies have shown significant score discrepancies between native and non-native English writers, as well as across different genders\citep{blodgett2020language}. Mitigation strategies include data re-balancing, adversarial training and post-hoc calibration.
 
 These toolkits and metrics give a strong method for this projects work on bias analysis, giving us the resources to systematically detect model biases and work to mitigate these disparities in predicted scores.
 
 
 \section{Datasets for AES}
-AES research has been fuelled by the availability of large, annotated essay datasets. Commonly the Automated Student Assessment Prize (ASAP) corpus is used, released by the Hewlett Foundation in 2012. Consisting of almost 13,000 essays across eight prompts, each with prompt-specific scoring rubrics, ASAP has become the benchmark for AES systems \parencite{asap2012kaggle}. It enabled both prompt-specific and prompt-agnostic evaluations and remains as a standard for comparative performative analysis.
+AES research has been fuelled by the availability of large, annotated essay datasets. Commonly the Automated Student Assessment Prize (ASAP) corpus is used, released by the Hewlett Foundation in 2012. Consisting of almost 13,000 essays across eight prompts, each with prompt-specific scoring rubrics, ASAP has become the benchmark for AES systems \citep{asap2012kaggle}. It enabled both prompt-specific and prompt-agnostic evaluations and remains as a standard for comparative performative analysis.
 
-An alternative to ASAP is the TOEFL11 corpus, containing essays written by non-native English speakers \parencite{blanchard2013toefl}. This data set is often used for evaluating a systems ability to handle second-language writing. The FCE dataset by Cambridge learner corpus also supports trait-based scoring with fine-grained annotations on vocabulary, cohesion and grammar \parencite{Yannakoudakis2011}. These datasets combined with others aid in research into both holistic and analytic scoring, aiding with the expansion of AES to a broader range of writing tasks.
+An alternative to ASAP is the TOEFL11 corpus, containing essays written by non-native English speakers \citep{blanchard2013toefl}. This data set is often used for evaluating a systems ability to handle second-language writing. The FCE dataset by Cambridge learner corpus also supports trait-based scoring with fine-grained annotations on vocabulary, cohesion and grammar \citep{Yannakoudakis2011}. These datasets combined with others aid in research into both holistic and analytic scoring, aiding with the expansion of AES to a broader range of writing tasks.
 
 More recently, datasets such as ASAP++ has added multi-trait labels, enabling models to be move beyond holistic scoring towards more detailed feedback generation. Along side this there are also corpus tailored for specific writing dimensions such as Argument Annotated Essays (AAE) which evaluate the persuasiveness and structure of arguments within text. Resources such as these have supported the development of systems capable of evaluating across different genres and to comprehend a wider range of instruction goals.
 
@@ -216,23 +253,23 @@ Despite these advancements, much of the AES datasets are still limited to Englis
 
 
 \section{Evaluation Metrics in AES}
-For AES system the standard evaluation metric is the Quadratic Weighted Kappa (QWK) \parencite{cohen1968kappa}, this measures the agreement between a models predictions and human scores. QWK is a quadratic weighted version of Cohen's Kappa, which accounts for the ordinal nature of essay scores. It ranges between -1 and 1, where 1 indicates perfect agreement, 0 indicates no agreement, and negative values indicate worse than random agreement. QWK is particularly useful in AES as it penalises larger discrepancies between predicted and actual scores more heavily than smaller ones.
+For AES system the standard evaluation metric is the Quadratic Weighted Kappa (QWK) \citep{cohen1968kappa}, this measures the agreement between a models predictions and human scores. QWK is a quadratic weighted version of Cohen's Kappa, which accounts for the ordinal nature of essay scores. It ranges between -1 and 1, where 1 indicates perfect agreement, 0 indicates no agreement, and negative values indicate worse than random agreement. QWK is particularly useful in AES as it penalises larger discrepancies between predicted and actual scores more heavily than smaller ones.
 
 In addition to QWK, regression metrics are very commonly used such as the Mean Squared Error (MSE) and Root Mean Squared Error (RMSE).  These metrics provide an insight into the magnitude of predictive errors and a highly beneficial in continuing predictive tasks. Mean Absolute Error (MAE) is also occasionally used due to its resistance to outliers, though it lacks the sensitivity of QWK to ordinal score differences.
 
-Some researchers report accuracy, especially in the form of  accuracy (i.e., within $\pm$1 of the human score), to reflect more lenient scoring expectations similar to inter-rater variability among humans \parencite{Shermis2013,taghipour2016neural}. However, accuracy alone may not fully reflect a model’s ranking reliability or nuanced error distribution, making it less preferred in rigorous evaluations 
-\parencite{Williamson2012,Yannakoudakis2011}.
+Some researchers report accuracy, especially in the form of  accuracy (i.e., within $\pm$1 of the human score), to reflect more lenient scoring expectations similar to inter-rater variability among humans \citep{Shermis2013,taghipour2016neural}. However, accuracy alone may not fully reflect a model’s ranking reliability or nuanced error distribution, making it less preferred in rigorous evaluations 
+\citep{Williamson2012,Yannakoudakis2011}.
 
 Ultimately the combination of QWK, MSE and correlation coefficients is typically used to assess various aspects of a models performance. The multi-metric approach aims to ensure that AES models are evaluated not just on pure agreement but additionally on how well they can replicate the scoring patters of their human counterparts across a range of tasks.
 
 \section{Challenges in AES}
 Despite the significant progression in AES technology, several significant challenges remain. One major concern is bias and fairness within the scoring. AES models can learn and perpetuate biases present within training data, leading to an unfair scoring for certain groups of students. Recent research has scrutinized whether AES systems favour or penalize essays based on factors unrelated 
-to the writings quality. Studies have found that a number of algorithms have exhibited different types of biases. For example, a comparative evaluation by \parencite{litman2024fairness}. found that some AES models' scores varies systematically with students race and gender demographics, even when essay quality was consistent. These biases often occur when a model picks up on linguistic styles or topics 
-more common for certain groups, or if the training essays are not properly balanced across demographics. This poses a risk where if these issues are ignores, AES systems may reinforce educational inequalities by giving lower scores to those essays written by non-native speakers or students from under-represented backgrounds \parencite{blodgett2020language}. Addressing these biases is challenging due to the requirement of identifying the subtle correlations and ensuring the models predictions are based purely on the relevant indicators. Ongoing research has including techniques such as bias audits, de-biasing models via data augmentations, fairness constraints and developing new "fairness" metrics to evaluate across subgroups of students. The assurance of AES fairness and lack of bias is an active concern within research as any real-world deployment of AES systems will requires high level of trust and accountability.
+to the writings quality. Studies have found that a number of algorithms have exhibited different types of biases. For example, a comparative evaluation by \citep{litman2024fairness}. found that some AES models' scores varies systematically with students race and gender demographics, even when essay quality was consistent. These biases often occur when a model picks up on linguistic styles or topics 
+more common for certain groups, or if the training essays are not properly balanced across demographics. This poses a risk where if these issues are ignores, AES systems may reinforce educational inequalities by giving lower scores to those essays written by non-native speakers or students from under-represented backgrounds \citep{blodgett2020language}. Addressing these biases is challenging due to the requirement of identifying the subtle correlations and ensuring the models predictions are based purely on the relevant indicators. Ongoing research has including techniques such as bias audits, de-biasing models via data augmentations, fairness constraints and developing new "fairness" metrics to evaluate across subgroups of students. The assurance of AES fairness and lack of bias is an active concern within research as any real-world deployment of AES systems will requires high level of trust and accountability.
 
-A second persistent challenge is cross-domain generalization (meaning a models ability to maintain its performance across new prompts and varying writing tasks outside of its training data). Traditionally, AES systems have been prompt-specific, an individual model developed trained for a singular essay prompt, trained on specific data. This approach is naturally limited in scalability as, requiring an individual model per task, and leads to issues in model robustness. In a practical ideal, AES systems would be capable of generalizing to a prompt of which it has never seen, without requiring further training. Research has shown that a model trained on one prompt is applied to an unseen prompt can lead to significant drops in performance, with some models only achieving 50\% of their original QWK scores \parencite{blanchard2013toefl}. The features and patterns learnt in training may not be applicable to a new prompt, due to the differences in vocabulary, structure and content required for different writing tasks. This problem of prompt dependency lead to a period of stagnation in AES research through the early 2000s, however with modern deep learning, a growing effort to tackle issues has resurfaced. Some approaches treat cross-prompt scoring as a domain adaption problem, where each prompt is a "domain" \parencite{litman2024fairness}. Other methods inject prompt information into the model to aid in an AES systems adjusting its expectations for content \parencite{blanchard2013toefl}. Some recent studies have reported progression with training prompt-agnostic models or multi-prompt training to improve generalization. The problem of a reliable cross-prompt AES remains unsolved - most models still perform best when fine-tuned on the target prompt data, to ensure a continent score criteria across problems is an open challenge. 
+A second persistent challenge is cross-domain generalization (meaning a models ability to maintain its performance across new prompts and varying writing tasks outside of its training data). Traditionally, AES systems have been prompt-specific, an individual model developed trained for a singular essay prompt, trained on specific data. This approach is naturally limited in scalability as, requiring an individual model per task, and leads to issues in model robustness. In a practical ideal, AES systems would be capable of generalizing to a prompt of which it has never seen, without requiring further training. Research has shown that a model trained on one prompt is applied to an unseen prompt can lead to significant drops in performance, with some models only achieving 50\% of their original QWK scores \citep{blanchard2013toefl}. The features and patterns learnt in training may not be applicable to a new prompt, due to the differences in vocabulary, structure and content required for different writing tasks. This problem of prompt dependency lead to a period of stagnation in AES research through the early 2000s, however with modern deep learning, a growing effort to tackle issues has resurfaced. Some approaches treat cross-prompt scoring as a domain adaption problem, where each prompt is a "domain" \citep{litman2024fairness}. Other methods inject prompt information into the model to aid in an AES systems adjusting its expectations for content \citep{blanchard2013toefl}. Some recent studies have reported progression with training prompt-agnostic models or multi-prompt training to improve generalization. The problem of a reliable cross-prompt AES remains unsolved - most models still perform best when fine-tuned on the target prompt data, to ensure a continent score criteria across problems is an open challenge. 
 
-Similarly there is the issue of a models ability to generalize across different proficiency levels and contexts of writing. Models are typically trained on a somewhat narrow band of essay types. Therefore when presented with an essay differing from their profile, their performance suffers. For instance, a system trained on high school essays may struggle when presented with elementary-level writing, or vice versa.  Similarly as mentioned, scoring essays written by English language learners (ELLs/ESL students) is a challenge if the model has seen mostly native-level writing. Studies have noted that the widely-used ASAP corpus consists of essays by native English speakers in a timed exam context, which means models tuned to it may not handle non-native grammar errors or unusual expressions well. In contrast to this, real-world applications must deal with a full range of second-language writing issues. Another important aspect is the robustness to varied essay lengths or formats, in some cases essay length can impact grade \parencite{Sgengjie2024acl}, and a model may unfairly rely on length if not carefully regularized. All these factors underline the need for AES systems of which are adaptable to different populations and conditions. Researchers are exploring techniques such as adversarial training, or building ensemble/hybrid models which combine neural scoring and rule-based checks to handle out of scope cases.
+Similarly there is the issue of a models ability to generalize across different proficiency levels and contexts of writing. Models are typically trained on a somewhat narrow band of essay types. Therefore when presented with an essay differing from their profile, their performance suffers. For instance, a system trained on high school essays may struggle when presented with elementary-level writing, or vice versa.  Similarly as mentioned, scoring essays written by English language learners (ELLs/ESL students) is a challenge if the model has seen mostly native-level writing. Studies have noted that the widely-used ASAP corpus consists of essays by native English speakers in a timed exam context, which means models tuned to it may not handle non-native grammar errors or unusual expressions well. In contrast to this, real-world applications must deal with a full range of second-language writing issues. Another important aspect is the robustness to varied essay lengths or formats, in some cases essay length can impact grade \citep{Sgengjie2024acl}, and a model may unfairly rely on length if not carefully regularized. All these factors underline the need for AES systems of which are adaptable to different populations and conditions. Researchers are exploring techniques such as adversarial training, or building ensemble/hybrid models which combine neural scoring and rule-based checks to handle out of scope cases.
 
 Nevertheless, ensuring an AES maintains its accuracy across any writer, across varying prompts, expertise level, genre and languages remains to be a long-term challenge. In multilingual settings this challenge poses an even greater struggle, a model trained in English cannot directly score in French or Spanish without significant alterations. As such cross-lingual AES is largely un-researched, due to the intricate language specific syntax difference. Sine process has been made in curating datasets for other languages however not to a significant enough level to allow for significant developments.
 
@@ -242,9 +279,9 @@ While the recent advancements in AES have produces substantial performance impro
 
 One notable limitation is due to the lack of generalisability across prompt and writing genres. Many systems are prompt-specific, requiring separate methods for each essay tasks. This process restricts model scalability and makes it very challenging to deploy AES systems in a real educational setting where writing tasks vary substantially. While recent prompt-agnostic approaches have shown promising, they remain somewhat unexplored and are often only able to be evaluated on limited datasets.
 
-Another constant challenge is the limited focus on fairness and bias \parencite{litman2024fairness}. Existing models have shown to underperform of essays written by non-native speakers or students from background less represented in training datasets. Despite of the availability of datasets like TOEFL11 that include demographical metadata, limited studies make use of such data to evaluate and/or mitigate the models bias. This represents an important area for future work, particularly when given importance of bias free models in an educational setting.
+Another constant challenge is the limited focus on fairness and bias \citep{litman2024fairness}. Existing models have shown to underperform of essays written by non-native speakers or students from background less represented in training datasets. Despite of the availability of datasets like TOEFL11 that include demographical metadata, limited studies make use of such data to evaluate and/or mitigate the models bias. This represents an important area for future work, particularly when given importance of bias free models in an educational setting.
 
-Many current AES systems also only produce a singular score with little available insight into the specific strengths or weaknesses of the students work \parencite{landauer2003iea}. There is a growing need for models to be capable of scoring off rubrics (as commonly used in university and school assessments), which would allow for more meaning full feedback to the student. Although some datasets support this type of scoring, these systems remain relatively underdeveloped compared to their holistic counterparts.
+Many current AES systems also only produce a singular score with little available insight into the specific strengths or weaknesses of the students work \citep{landauer2003iea}. There is a growing need for models to be capable of scoring off rubrics (as commonly used in university and school assessments), which would allow for more meaning full feedback to the student. Although some datasets support this type of scoring, these systems remain relatively underdeveloped compared to their holistic counterparts.
 
 Additionally, current research focuses almost solely on types, English text, leaving a significant gap in assessments taken through handwritten responses or spoken essays. Expanding current systems to support handwriting or speech could make systems more inclusive and better aligned with real-world classroom use, especially in areas where there is lower access to technology.
 
@@ -321,11 +358,11 @@ These limitations do not prevent the development of effective models, but they d
 \section{Additional datasets for model extensions}
 In addition to the ASAP dataset, a number of additional datasets have been considered to support the planned extensions onto the base ASE model. These additional resources are intended to aid in the implementation of bias analysis, multi-modal scoring, multi-linguistic scoring and feedback generation (among other potential additions).
 
-One key option is the \textbf{TOEFL11 corpus}, this dataset is comprised of a series of non-native English speaker essays from eleven different language backgrounds. This dataset contains metadata of the writers native language, gender and English proficiency level. This addition enables exploration into demographic bias and the models ability to generalise across the writing patterns of different groups\parencite{blanchard2013toefl}.
+One key option is the \textbf{TOEFL11 corpus}, this dataset is comprised of a series of non-native English speaker essays from eleven different language backgrounds. This dataset contains metadata of the writers native language, gender and English proficiency level. This addition enables exploration into demographic bias and the models ability to generalise across the writing patterns of different groups\citep{blanchard2013toefl}.
 
 The \textbf{First Certificate in English (FCE) Dataset} produced from the Cambridge learner Corpus, offers a different approach. Unlike the ASAP, the FCE gives detailed annotations assessing the essays grammar, coherence, vocabulary, and structure. This aid with multi-dimensional scoring and enables additions focusing on explainability and providing targetted feedback.
 
-To support extensions into handwritten essay scoring, the \textbf{IAM Handwriting Database} is being considered \parencite{marti2002iam}. This dataset consists of handwritten English text collected from over 600 writers. While this dataset has little to do with the domain of AES models it will provide value to the models use cases through enabling the comprehension of hand written text. As previously mentioned, much of students work is completed by hand and therefore including an implementation for processing handwritten text is a key requirement for real-world implementation.
+To support extensions into handwritten essay scoring, the \textbf{IAM Handwriting Database} is being considered \citep{marti2002iam}. This dataset consists of handwritten English text collected from over 600 writers. While this dataset has little to do with the domain of AES models it will provide value to the models use cases through enabling the comprehension of hand written text. As previously mentioned, much of students work is completed by hand and therefore including an implementation for processing handwritten text is a key requirement for real-world implementation.
 
 \chapter{Methodology}
 This section outlines the methodological framework used to develop, train and evaluate the AES system. This methodology serves as both a practical guide for implementation and as a transparent report to aid with reproducibility. The approach blends modern NLP techniques with robust evaluation strategies in order to address key limitations within the current research - specifically related to generalisability, interpretability, and bias.
@@ -385,7 +422,6 @@ Alternative techniques such as z-score normalisation and ordinal regression were
 \section{Fairness and Bias Analysis}
 \section{Comparison with Human Raters}
 
-
 \chapter{Discussion}
 \section{Interpretation of Results}
 \section{Contributions to the Field}
@@ -393,20 +429,63 @@ Alternative techniques such as z-score normalisation and ordinal regression were
 \section{Implications for Educational Technology}
 
 \chapter{Conclusion}
-\section{Summary of Findings}
-\section{Answers to Research Questions}
-\section{Future Work}
-
-\printbibliography
 
 
+% Example citation to resolve "no \citation commands" error
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{references}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
-\chapter{Code Snippets}
+%%
+%% Use the appendix for major chunks of detailed work, such as these. Tailor
+%% these to your own requirements
+%%
 
-\chapter{Additional Tables or Figures}
-\chapter{Ethics Approval Form}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Design Diagrams}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{User Documentation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Raw Results Output}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Code}
+% Notebook 1
+\begin{landscape}
+\begin{multicols}{2}
+\section{File: 01 Data Imports and Preprocessing}
+\lstinputlisting[basicstyle=\scriptsize]{Notebooks/01-Data_Imports_and_Preprocessing.py}
+\end{multicols}
+\end{landscape}
+
+% Notebook 2
+\begin{landscape}
+\begin{multicols}{2}
+\section{File: 02 Tokenisation}
+\lstinputlisting[basicstyle=\scriptsize]{Notebooks/02-Tokenisatoin.py}
+\end{multicols}
+\end{landscape}
+
+% Notebook 3
+\begin{landscape}
+\begin{multicols}{2}
+\section{File: 03 Baseline Models}
+\lstinputlisting[basicstyle=\scriptsize]{Notebooks/03-Baseline_models.py}
+\end{multicols}
+\end{landscape}
+
+% Add more as needed
 
 
 \end{document}
