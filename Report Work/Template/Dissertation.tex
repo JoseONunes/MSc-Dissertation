@@ -6,7 +6,7 @@
 
 \usepackage{Bath-CS-Dissertation}
 \usepackage{natbib}
-\bibliographystyle{bathx}
+
 
 % Ensure the bibliography file "references.bib" exists in the same directory
 
@@ -406,6 +406,17 @@ Alternative techniques such as z-score normalisation and ordinal regression were
 
 \section{Model Architecture and Implementation}
 \subsection{Baseline Models}
+To establish a comparative baseline for the performance of the transformer-based AES system, several traditional machine learning regressors were implemented. These include, Ridge Regression, Support Vector Regressors (SVR), and a Random Forrest Regressor. All baseline models operate on the TF-IDF representations of essays, which were selected due to their ability to preserve frequency-weighted term information, while remaining interpretable and computational efficient \citep{zhang2020automated}.
+
+The TF-IDF vectorizer was configures with a maximum of 10,000 features and allowed for unigrams and bigrams \texttt{(i.e., ngram\_range(1,2))}, enabling the capture of both single word frequencies and short collocations. Following this, essay texts are split into training, validation and testing split(80\%,10\%,10\% respectively) using a random seen to ensure reproducibility. The target variable was the win-max normalized essay score, as discussed in section 4.2.3.
+
+The ridge regression model was selected due to its regularized nature, which controls overfitting through the penalization of large weights. This served as the primary linear baseline. SVR with a radial basis function kernel was used to introduce non-linear modeling, allowing for the capture of more complex relationships between essay text and score. The random forrest regressor, as ensemble of decision trees, provides a thrid approach by aggregating multiple tree-based leraners, of which are robust to outliers and can modle the non linear feature interactions without requireing scaling \citep{breiman2001random}.
+
+Each model was evaluated with MSE and QWK - the latter being especially relevant for AES due to its sensitivity to the ordinal label discrepancies \citep{cohen1968kappa}. To compute QWK, predicted and actual scores were rescaled to match the typically 0-12 range of AES evaluations \citep{taghipour2016neural}.
+
+The baseline models serve to establish reference points for comparing the effectiveness of transformer-based methods in both predictive accuracy and fairness, as will be discussed in chapter 5.
+
+
 \subsection{Transformer Fine-Tuning}
 \subsection{Training Configuration}
 \section{Evaluation Strategy}
@@ -430,10 +441,6 @@ Alternative techniques such as z-score normalisation and ordinal regression were
 
 \chapter{Conclusion}
 
-
-% Example citation to resolve "no \citation commands" error
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliography{references}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -465,15 +472,15 @@ Alternative techniques such as z-score normalisation and ordinal regression were
 \begin{landscape}
 \begin{multicols}{2}
 \section{File: 01 Data Imports and Preprocessing}
-\lstinputlisting[basicstyle=\scriptsize]{Notebooks/01-Data_Imports_and_Preprocessing.py}
+\lstinputlisting[basicstyle=\scriptsize]{Notebooks/01-Data-Imports-and-Preprocessing.py}
 \end{multicols}
 \end{landscape}
 
 % Notebook 2
 \begin{landscape}
 \begin{multicols}{2}
-\section{File: 02 Tokenisation}
-\lstinputlisting[basicstyle=\scriptsize]{Notebooks/02-Tokenisatoin.py}
+\section{File: 02 Tokenization}
+\lstinputlisting[basicstyle=\scriptsize]{Notebooks/02-Tokenization.py}
 \end{multicols}
 \end{landscape}
 
@@ -481,11 +488,19 @@ Alternative techniques such as z-score normalisation and ordinal regression were
 \begin{landscape}
 \begin{multicols}{2}
 \section{File: 03 Baseline Models}
-\lstinputlisting[basicstyle=\scriptsize]{Notebooks/03-Baseline_models.py}
+\lstinputlisting[basicstyle=\scriptsize]{Notebooks/03-Baseline-models.py}
+\end{multicols}
+\end{landscape}
+
+% Notebook 4
+\begin{landscape}
+\begin{multicols}{2}
+\section{File: 03 Baseline Models}
+\lstinputlisting[basicstyle=\scriptsize]{Notebooks/04-Transformers-Fine-Tuning.py}
 \end{multicols}
 \end{landscape}
 
 % Add more as needed
 
-
+\bibliography{references}
 \end{document}

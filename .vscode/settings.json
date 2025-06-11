@@ -1,7 +1,12 @@
 {
     "cSpell.words": [
+        "bigrams",
         "generalisability",
         "interpretability",
-        "ipynb"
+        "ipynb",
+        "ngram",
+        "overfitting",
+        "unigrams",
+        "vectorizer"
     ]
 }

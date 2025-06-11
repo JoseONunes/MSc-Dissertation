@@ -30,4 +30,4 @@ def convert_notebooks_to_scripts(input_folder, output_folder):
             print(f"✅ Converted (cleaned): {filename} -> {script_filename}")
 
 # Example usage
-convert_notebooks_to_scripts("Project/Notebooks", "Report Work/Template/Notebooks")
+convert_notebooks_to_scripts("Notebooks", "../Report Work/Template/Notebooks")
